@@ -1,0 +1,4085 @@
+
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <meta charset="UTF-8">
+              <title>Backtesting</title>
+            </head>
+            <body>
+              <h1>Backtesting</h1>
+              <table border="1" class="dataframe sortable">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>strategy</th>
+      <th>exchange_name</th>
+      <th>asset</th>
+      <th>freq</th>
+      <th>Start</th>
+      <th>End</th>
+      <th>Return [%]</th>
+      <th>Buy & Hold Return [%]</th>
+      <th>optimized</th>
+      <th>backtest</th>
+      <th>stats</th>
+      <th>updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>GoldenCross</td>
+      <td>SNP</td>
+      <td>^GSPC</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>102.93</td>
+      <td>163.84</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_SNP_^GSPC_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_SNP_^GSPC_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>GoldenCross</td>
+      <td>SNP</td>
+      <td>^GSPC</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>120.15</td>
+      <td>163.84</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_SNP_^GSPC_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_SNP_^GSPC_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>GoldenCross</td>
+      <td>DJI</td>
+      <td>^DJI</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>127.51</td>
+      <td>191.85</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_DJI_^DJI_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_DJI_^DJI_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>GoldenCross</td>
+      <td>DJI</td>
+      <td>^DJI</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>157.46</td>
+      <td>191.85</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_DJI_^DJI_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_DJI_^DJI_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>GoldenCross</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1D</td>
+      <td>2017-12-02 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>10.67</td>
+      <td>76.73</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_bitflyer_BTCJPY_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_bitflyer_BTCJPY_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>GoldenCross</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1D</td>
+      <td>2017-12-02 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>120.78</td>
+      <td>76.73</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_bitflyer_BTCJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_bitflyer_BTCJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>GoldenCross</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1D</td>
+      <td>2020-09-19 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>266.07</td>
+      <td>294.96</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_bitflyer_ETHJPY_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_bitflyer_ETHJPY_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>GoldenCross</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1D</td>
+      <td>2020-09-19 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>239.04</td>
+      <td>294.96</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_bitflyer_ETHJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_bitflyer_ETHJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>GoldenCross</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>1D</td>
+      <td>2019-09-26 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>658.52</td>
+      <td>786.61</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_bitflyer_ETH-JPY-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_bitflyer_ETH-JPY-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>GoldenCross</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>1D</td>
+      <td>2019-09-26 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>922.29</td>
+      <td>786.61</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_bitflyer_ETH-JPY-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_bitflyer_ETH-JPY-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>GoldenCross</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>4H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>31.31</td>
+      <td>77.11</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_bitflyer_BTCJPY_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_bitflyer_BTCJPY_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>GoldenCross</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>4H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>47.02</td>
+      <td>77.11</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_bitflyer_BTCJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_bitflyer_BTCJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>GoldenCross</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>4H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>332.23</td>
+      <td>294.40</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_bitflyer_ETHJPY_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_bitflyer_ETHJPY_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>GoldenCross</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>4H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>322.64</td>
+      <td>294.40</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_bitflyer_ETHJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_bitflyer_ETHJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>GoldenCross</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>56.83</td>
+      <td>76.26</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_bitflyer_BTCJPY_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_bitflyer_BTCJPY_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>GoldenCross</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>74.59</td>
+      <td>76.26</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_bitflyer_BTCJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_bitflyer_BTCJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>GoldenCross</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>316.39</td>
+      <td>292.60</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_bitflyer_ETHJPY_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_bitflyer_ETHJPY_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>GoldenCross</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>329.95</td>
+      <td>292.60</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_bitflyer_ETHJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_bitflyer_ETHJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>GoldenCross</td>
+      <td>bitflyer</td>
+      <td>BTC-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>-56.11</td>
+      <td>-59.00</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_bitflyer_BTC-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_bitflyer_BTC-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>GoldenCross</td>
+      <td>bitflyer</td>
+      <td>BTC-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>-55.22</td>
+      <td>-59.00</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_bitflyer_BTC-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_bitflyer_BTC-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>GoldenCross</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>-66.44</td>
+      <td>-63.78</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_bitflyer_ETH-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_bitflyer_ETH-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>GoldenCross</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>-65.08</td>
+      <td>-63.78</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_bitflyer_ETH-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_bitflyer_ETH-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>GoldenCross</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-01-01 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>3837.50</td>
+      <td>3738.68</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_coinbase_BTC-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_coinbase_BTC-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>GoldenCross</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-01-01 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>3747.67</td>
+      <td>3738.68</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_coinbase_BTC-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_coinbase_BTC-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>GoldenCross</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-05-18 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>8939.58</td>
+      <td>9129.44</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_coinbase_ETH-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_coinbase_ETH-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>GoldenCross</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-05-18 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>9110.59</td>
+      <td>9129.44</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_coinbase_ETH-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_coinbase_ETH-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>GoldenCross</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>-67.17</td>
+      <td>-65.40</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_coinbase_BTC-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_coinbase_BTC-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>GoldenCross</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>-64.94</td>
+      <td>-65.40</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_coinbase_BTC-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_coinbase_BTC-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>GoldenCross</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>-72.00</td>
+      <td>-69.67</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_coinbase_ETH-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_coinbase_ETH-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>GoldenCross</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>-69.56</td>
+      <td>-69.67</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_coinbase_ETH-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_coinbase_ETH-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>GoldenCross</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>-71.61</td>
+      <td>-64.99</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_coinbase_BTC-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_coinbase_BTC-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>GoldenCross</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>-68.73</td>
+      <td>-64.99</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_coinbase_BTC-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_coinbase_BTC-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>GoldenCross</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>-76.29</td>
+      <td>-69.14</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_coinbase_ETH-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_coinbase_ETH-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>GoldenCross</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>-72.38</td>
+      <td>-69.14</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenCross_coinbase_ETH-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenCross_coinbase_ETH-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>DeadCross</td>
+      <td>SNP</td>
+      <td>^GSPC</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>-83.96</td>
+      <td>163.84</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_SNP_^GSPC_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_SNP_^GSPC_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>DeadCross</td>
+      <td>SNP</td>
+      <td>^GSPC</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>-82.23</td>
+      <td>163.84</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_SNP_^GSPC_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_SNP_^GSPC_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>DeadCross</td>
+      <td>DJI</td>
+      <td>^DJI</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>-83.58</td>
+      <td>191.85</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_DJI_^DJI_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_DJI_^DJI_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>DeadCross</td>
+      <td>DJI</td>
+      <td>^DJI</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>-82.27</td>
+      <td>191.85</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_DJI_^DJI_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_DJI_^DJI_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>DeadCross</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1D</td>
+      <td>2017-12-02 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>-88.29</td>
+      <td>76.73</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_bitflyer_BTCJPY_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_bitflyer_BTCJPY_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>DeadCross</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1D</td>
+      <td>2017-12-02 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>-100.00</td>
+      <td>75.55</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_bitflyer_BTCJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_bitflyer_BTCJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>DeadCross</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1D</td>
+      <td>2020-09-19 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>-100.00</td>
+      <td>294.96</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_bitflyer_ETHJPY_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_bitflyer_ETHJPY_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>DeadCross</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1D</td>
+      <td>2020-09-19 00:00:00</td>
+      <td>2022-12-29 00:00:00</td>
+      <td>-100.00</td>
+      <td>295.62</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_bitflyer_ETHJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_bitflyer_ETHJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>DeadCross</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>1D</td>
+      <td>2019-09-26 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>-100.00</td>
+      <td>786.61</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_bitflyer_ETH-JPY-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_bitflyer_ETH-JPY-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>DeadCross</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>1D</td>
+      <td>2019-09-26 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>-100.00</td>
+      <td>786.61</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_bitflyer_ETH-JPY-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_bitflyer_ETH-JPY-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>DeadCross</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>4H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>-82.11</td>
+      <td>77.11</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_bitflyer_BTCJPY_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_bitflyer_BTCJPY_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>DeadCross</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>4H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>-81.23</td>
+      <td>77.11</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_bitflyer_BTCJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_bitflyer_BTCJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>DeadCross</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>4H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>-98.85</td>
+      <td>294.40</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_bitflyer_ETHJPY_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_bitflyer_ETHJPY_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>DeadCross</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>4H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>-100.00</td>
+      <td>294.40</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_bitflyer_ETHJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_bitflyer_ETHJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>DeadCross</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>-84.66</td>
+      <td>76.26</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_bitflyer_BTCJPY_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_bitflyer_BTCJPY_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>DeadCross</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>-83.63</td>
+      <td>76.26</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_bitflyer_BTCJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_bitflyer_BTCJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>DeadCross</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>-95.45</td>
+      <td>292.60</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_bitflyer_ETHJPY_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_bitflyer_ETHJPY_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>DeadCross</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>-98.09</td>
+      <td>292.60</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_bitflyer_ETHJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_bitflyer_ETHJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>DeadCross</td>
+      <td>bitflyer</td>
+      <td>BTC-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>35.63</td>
+      <td>-59.00</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_bitflyer_BTC-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_bitflyer_BTC-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>DeadCross</td>
+      <td>bitflyer</td>
+      <td>BTC-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>53.99</td>
+      <td>-59.00</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_bitflyer_BTC-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_bitflyer_BTC-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>DeadCross</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>30.02</td>
+      <td>-63.78</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_bitflyer_ETH-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_bitflyer_ETH-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>DeadCross</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>41.12</td>
+      <td>-63.78</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_bitflyer_ETH-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_bitflyer_ETH-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>DeadCross</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-01-01 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>-100.00</td>
+      <td>3738.68</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_coinbase_BTC-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_coinbase_BTC-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>DeadCross</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-01-01 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>-100.00</td>
+      <td>3738.68</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_coinbase_BTC-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_coinbase_BTC-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>DeadCross</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-05-18 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>-100.00</td>
+      <td>9129.44</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_coinbase_ETH-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_coinbase_ETH-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>DeadCross</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-05-18 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>-100.00</td>
+      <td>9129.44</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_coinbase_ETH-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_coinbase_ETH-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>60</th>
+      <td>DeadCross</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>77.59</td>
+      <td>-65.40</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_coinbase_BTC-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_coinbase_BTC-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>DeadCross</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>99.40</td>
+      <td>-65.40</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_coinbase_BTC-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_coinbase_BTC-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>DeadCross</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>16.12</td>
+      <td>-69.67</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_coinbase_ETH-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_coinbase_ETH-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>DeadCross</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>70.21</td>
+      <td>-69.67</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_coinbase_ETH-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_coinbase_ETH-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>DeadCross</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>54.99</td>
+      <td>-64.99</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_coinbase_BTC-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_coinbase_BTC-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>DeadCross</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>65.05</td>
+      <td>-64.99</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_coinbase_BTC-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_coinbase_BTC-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>DeadCross</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>29.80</td>
+      <td>-69.14</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_coinbase_ETH-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_coinbase_ETH-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>DeadCross</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>50.71</td>
+      <td>-69.14</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_DeadCross_coinbase_ETH-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_DeadCross_coinbase_ETH-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>PerfectOrder</td>
+      <td>SNP</td>
+      <td>^GSPC</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>71.18</td>
+      <td>163.84</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_SNP_^GSPC_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_SNP_^GSPC_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>PerfectOrder</td>
+      <td>SNP</td>
+      <td>^GSPC</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>162.14</td>
+      <td>163.84</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_SNP_^GSPC_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_SNP_^GSPC_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td>PerfectOrder</td>
+      <td>DJI</td>
+      <td>^DJI</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>-17.95</td>
+      <td>191.85</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_DJI_^DJI_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_DJI_^DJI_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>PerfectOrder</td>
+      <td>DJI</td>
+      <td>^DJI</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>17.85</td>
+      <td>191.85</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_DJI_^DJI_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_DJI_^DJI_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td>PerfectOrder</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1D</td>
+      <td>2017-12-02 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>255.51</td>
+      <td>76.73</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_bitflyer_BTCJPY_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_bitflyer_BTCJPY_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>PerfectOrder</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1D</td>
+      <td>2017-12-02 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>652.83</td>
+      <td>76.73</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_bitflyer_BTCJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_bitflyer_BTCJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>PerfectOrder</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1D</td>
+      <td>2020-09-19 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>57.60</td>
+      <td>294.96</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_bitflyer_ETHJPY_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_bitflyer_ETHJPY_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>PerfectOrder</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1D</td>
+      <td>2020-09-19 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>220.41</td>
+      <td>294.96</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_bitflyer_ETHJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_bitflyer_ETHJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>PerfectOrder</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>1D</td>
+      <td>2019-09-26 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>947.44</td>
+      <td>786.61</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_bitflyer_ETH-JPY-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_bitflyer_ETH-JPY-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>PerfectOrder</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>1D</td>
+      <td>2019-09-26 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>2915.41</td>
+      <td>786.61</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_bitflyer_ETH-JPY-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_bitflyer_ETH-JPY-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>PerfectOrder</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>4H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>596.35</td>
+      <td>77.11</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_bitflyer_BTCJPY_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_bitflyer_BTCJPY_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>PerfectOrder</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>4H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>1008.46</td>
+      <td>77.11</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_bitflyer_BTCJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_bitflyer_BTCJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>PerfectOrder</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>4H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>132.02</td>
+      <td>294.40</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_bitflyer_ETHJPY_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_bitflyer_ETHJPY_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>PerfectOrder</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>4H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>371.86</td>
+      <td>294.40</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_bitflyer_ETHJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_bitflyer_ETHJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>PerfectOrder</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>1838.99</td>
+      <td>76.26</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_bitflyer_BTCJPY_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_bitflyer_BTCJPY_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>PerfectOrder</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>3980.25</td>
+      <td>76.26</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_bitflyer_BTCJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_bitflyer_BTCJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>PerfectOrder</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>134.15</td>
+      <td>292.60</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_bitflyer_ETHJPY_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_bitflyer_ETHJPY_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>PerfectOrder</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>793.89</td>
+      <td>292.60</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_bitflyer_ETHJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_bitflyer_ETHJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>PerfectOrder</td>
+      <td>bitflyer</td>
+      <td>BTC-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>-34.49</td>
+      <td>-59.00</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_bitflyer_BTC-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_bitflyer_BTC-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>PerfectOrder</td>
+      <td>bitflyer</td>
+      <td>BTC-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>31.22</td>
+      <td>-59.00</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_bitflyer_BTC-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_bitflyer_BTC-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td>PerfectOrder</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>-6.81</td>
+      <td>-63.78</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_bitflyer_ETH-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_bitflyer_ETH-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>PerfectOrder</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>124.64</td>
+      <td>-63.78</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_bitflyer_ETH-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_bitflyer_ETH-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>PerfectOrder</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-01-01 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>5917.92</td>
+      <td>3738.68</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_coinbase_BTC-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_coinbase_BTC-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>PerfectOrder</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-01-01 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>17088.93</td>
+      <td>3738.68</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_coinbase_BTC-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_coinbase_BTC-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td>PerfectOrder</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-05-18 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>5740.75</td>
+      <td>9129.44</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_coinbase_ETH-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_coinbase_ETH-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>PerfectOrder</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-05-18 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>19642.22</td>
+      <td>9129.44</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_coinbase_ETH-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_coinbase_ETH-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>PerfectOrder</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>-32.73</td>
+      <td>-65.40</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_coinbase_BTC-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_coinbase_BTC-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>PerfectOrder</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>-17.25</td>
+      <td>-65.40</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_coinbase_BTC-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_coinbase_BTC-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>PerfectOrder</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>39.44</td>
+      <td>-69.67</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_coinbase_ETH-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_coinbase_ETH-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>PerfectOrder</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>55.89</td>
+      <td>-69.67</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_coinbase_ETH-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_coinbase_ETH-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>PerfectOrder</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>-34.80</td>
+      <td>-64.99</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_coinbase_BTC-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_coinbase_BTC-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>PerfectOrder</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>-21.40</td>
+      <td>-64.99</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_coinbase_BTC-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_coinbase_BTC-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td>PerfectOrder</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>-25.42</td>
+      <td>-69.14</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_coinbase_ETH-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_coinbase_ETH-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>101</th>
+      <td>PerfectOrder</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>56.89</td>
+      <td>-69.14</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_PerfectOrder_coinbase_ETH-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_PerfectOrder_coinbase_ETH-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>102</th>
+      <td>ChannelBreakOut</td>
+      <td>SNP</td>
+      <td>^GSPC</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>-92.11</td>
+      <td>163.84</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_SNP_^GSPC_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_SNP_^GSPC_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>ChannelBreakOut</td>
+      <td>SNP</td>
+      <td>^GSPC</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>-27.85</td>
+      <td>163.84</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_SNP_^GSPC_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_SNP_^GSPC_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>104</th>
+      <td>ChannelBreakOut</td>
+      <td>DJI</td>
+      <td>^DJI</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>-78.31</td>
+      <td>191.85</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_DJI_^DJI_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_DJI_^DJI_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>105</th>
+      <td>ChannelBreakOut</td>
+      <td>DJI</td>
+      <td>^DJI</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>93.55</td>
+      <td>191.85</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_DJI_^DJI_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_DJI_^DJI_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td>ChannelBreakOut</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1D</td>
+      <td>2017-12-02 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>1121.29</td>
+      <td>76.73</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_bitflyer_BTCJPY_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_bitflyer_BTCJPY_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>107</th>
+      <td>ChannelBreakOut</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1D</td>
+      <td>2017-12-02 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>2498.37</td>
+      <td>76.73</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_bitflyer_BTCJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_bitflyer_BTCJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>108</th>
+      <td>ChannelBreakOut</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1D</td>
+      <td>2020-09-19 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>31.51</td>
+      <td>294.96</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_bitflyer_ETHJPY_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_bitflyer_ETHJPY_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>109</th>
+      <td>ChannelBreakOut</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1D</td>
+      <td>2020-09-19 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>2103.47</td>
+      <td>294.96</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_bitflyer_ETHJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_bitflyer_ETHJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>110</th>
+      <td>ChannelBreakOut</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>1D</td>
+      <td>2019-09-26 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>203.96</td>
+      <td>786.61</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_bitflyer_ETH-JPY-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_bitflyer_ETH-JPY-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>111</th>
+      <td>ChannelBreakOut</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>1D</td>
+      <td>2019-09-26 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>953.79</td>
+      <td>786.61</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_bitflyer_ETH-JPY-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_bitflyer_ETH-JPY-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>ChannelBreakOut</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>4H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>5292.19</td>
+      <td>77.11</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_bitflyer_BTCJPY_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_bitflyer_BTCJPY_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>113</th>
+      <td>ChannelBreakOut</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>4H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>1659.77</td>
+      <td>77.11</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_bitflyer_BTCJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_bitflyer_BTCJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td>ChannelBreakOut</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>4H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>23.90</td>
+      <td>294.40</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_bitflyer_ETHJPY_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_bitflyer_ETHJPY_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>ChannelBreakOut</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>4H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>413.04</td>
+      <td>294.40</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_bitflyer_ETHJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_bitflyer_ETHJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>ChannelBreakOut</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>59.13</td>
+      <td>76.26</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_bitflyer_BTCJPY_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_bitflyer_BTCJPY_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>ChannelBreakOut</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>24253.50</td>
+      <td>76.26</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_bitflyer_BTCJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_bitflyer_BTCJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>ChannelBreakOut</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>-71.96</td>
+      <td>292.60</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_bitflyer_ETHJPY_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_bitflyer_ETHJPY_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>ChannelBreakOut</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>1184.74</td>
+      <td>292.60</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_bitflyer_ETHJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_bitflyer_ETHJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>ChannelBreakOut</td>
+      <td>bitflyer</td>
+      <td>BTC-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>-31.85</td>
+      <td>-59.00</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_bitflyer_BTC-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_bitflyer_BTC-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>ChannelBreakOut</td>
+      <td>bitflyer</td>
+      <td>BTC-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>38.05</td>
+      <td>-59.00</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_bitflyer_BTC-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_bitflyer_BTC-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>122</th>
+      <td>ChannelBreakOut</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>-41.41</td>
+      <td>-63.78</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_bitflyer_ETH-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_bitflyer_ETH-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>123</th>
+      <td>ChannelBreakOut</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>290.21</td>
+      <td>-63.78</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_bitflyer_ETH-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_bitflyer_ETH-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>124</th>
+      <td>ChannelBreakOut</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-01-01 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>4305.34</td>
+      <td>3738.68</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_coinbase_BTC-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_coinbase_BTC-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>125</th>
+      <td>ChannelBreakOut</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-01-01 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>6726.29</td>
+      <td>3738.68</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_coinbase_BTC-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_coinbase_BTC-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>126</th>
+      <td>ChannelBreakOut</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-05-18 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>45309.78</td>
+      <td>9129.44</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_coinbase_ETH-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_coinbase_ETH-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>127</th>
+      <td>ChannelBreakOut</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-05-18 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>51826.42</td>
+      <td>9129.44</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_coinbase_ETH-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_coinbase_ETH-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>128</th>
+      <td>ChannelBreakOut</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>-45.20</td>
+      <td>-65.40</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_coinbase_BTC-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_coinbase_BTC-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>ChannelBreakOut</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>166.38</td>
+      <td>-65.40</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_coinbase_BTC-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_coinbase_BTC-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>130</th>
+      <td>ChannelBreakOut</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>19.98</td>
+      <td>-69.67</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_coinbase_ETH-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_coinbase_ETH-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>ChannelBreakOut</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>384.09</td>
+      <td>-69.67</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_coinbase_ETH-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_coinbase_ETH-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>132</th>
+      <td>ChannelBreakOut</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>-77.40</td>
+      <td>-64.99</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_coinbase_BTC-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_coinbase_BTC-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>133</th>
+      <td>ChannelBreakOut</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>-11.58</td>
+      <td>-64.99</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_coinbase_BTC-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_coinbase_BTC-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>134</th>
+      <td>ChannelBreakOut</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>82.08</td>
+      <td>-69.14</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_coinbase_ETH-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_coinbase_ETH-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>135</th>
+      <td>ChannelBreakOut</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>266.96</td>
+      <td>-69.14</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ChannelBreakOut_coinbase_ETH-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ChannelBreakOut_coinbase_ETH-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>136</th>
+      <td>ConnorsRSI</td>
+      <td>SNP</td>
+      <td>^GSPC</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>46.75</td>
+      <td>163.84</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_SNP_^GSPC_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_SNP_^GSPC_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>137</th>
+      <td>ConnorsRSI</td>
+      <td>SNP</td>
+      <td>^GSPC</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>78.96</td>
+      <td>163.84</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_SNP_^GSPC_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_SNP_^GSPC_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>138</th>
+      <td>ConnorsRSI</td>
+      <td>DJI</td>
+      <td>^DJI</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>55.65</td>
+      <td>191.85</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_DJI_^DJI_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_DJI_^DJI_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>139</th>
+      <td>ConnorsRSI</td>
+      <td>DJI</td>
+      <td>^DJI</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>292.31</td>
+      <td>191.85</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_DJI_^DJI_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_DJI_^DJI_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>140</th>
+      <td>ConnorsRSI</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1D</td>
+      <td>2017-12-02 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>165.44</td>
+      <td>76.73</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_bitflyer_BTCJPY_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_bitflyer_BTCJPY_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>141</th>
+      <td>ConnorsRSI</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1D</td>
+      <td>2017-12-02 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>250.43</td>
+      <td>76.73</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_bitflyer_BTCJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_bitflyer_BTCJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>ConnorsRSI</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1D</td>
+      <td>2020-09-19 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>-6.39</td>
+      <td>294.96</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_bitflyer_ETHJPY_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_bitflyer_ETHJPY_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>143</th>
+      <td>ConnorsRSI</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1D</td>
+      <td>2020-09-19 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>5.92</td>
+      <td>294.96</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_bitflyer_ETHJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_bitflyer_ETHJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>144</th>
+      <td>ConnorsRSI</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>1D</td>
+      <td>2019-09-26 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>768.95</td>
+      <td>786.61</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_bitflyer_ETH-JPY-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_bitflyer_ETH-JPY-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>ConnorsRSI</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>1D</td>
+      <td>2019-09-26 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>963.14</td>
+      <td>786.61</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_bitflyer_ETH-JPY-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_bitflyer_ETH-JPY-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>ConnorsRSI</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>4H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>9.79</td>
+      <td>77.11</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_bitflyer_BTCJPY_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_bitflyer_BTCJPY_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>ConnorsRSI</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>4H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>62.05</td>
+      <td>77.11</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_bitflyer_BTCJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_bitflyer_BTCJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>ConnorsRSI</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>4H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>324.13</td>
+      <td>294.40</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_bitflyer_ETHJPY_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_bitflyer_ETHJPY_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>ConnorsRSI</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>4H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>206.92</td>
+      <td>294.40</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_bitflyer_ETHJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_bitflyer_ETHJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>150</th>
+      <td>ConnorsRSI</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>-11.84</td>
+      <td>76.26</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_bitflyer_BTCJPY_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_bitflyer_BTCJPY_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>151</th>
+      <td>ConnorsRSI</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>207.56</td>
+      <td>76.26</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_bitflyer_BTCJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_bitflyer_BTCJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>152</th>
+      <td>ConnorsRSI</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>309.77</td>
+      <td>292.60</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_bitflyer_ETHJPY_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_bitflyer_ETHJPY_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>153</th>
+      <td>ConnorsRSI</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>323.69</td>
+      <td>292.60</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_bitflyer_ETHJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_bitflyer_ETHJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>154</th>
+      <td>ConnorsRSI</td>
+      <td>bitflyer</td>
+      <td>BTC-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>-55.98</td>
+      <td>-59.00</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_bitflyer_BTC-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_bitflyer_BTC-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>155</th>
+      <td>ConnorsRSI</td>
+      <td>bitflyer</td>
+      <td>BTC-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>-4.40</td>
+      <td>-59.00</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_bitflyer_BTC-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_bitflyer_BTC-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>156</th>
+      <td>ConnorsRSI</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>-71.98</td>
+      <td>-63.78</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_bitflyer_ETH-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_bitflyer_ETH-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>157</th>
+      <td>ConnorsRSI</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>-2.14</td>
+      <td>-63.78</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_bitflyer_ETH-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_bitflyer_ETH-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>158</th>
+      <td>ConnorsRSI</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-01-01 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>2219.47</td>
+      <td>3738.68</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_coinbase_BTC-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_coinbase_BTC-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>159</th>
+      <td>ConnorsRSI</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-01-01 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>2788.30</td>
+      <td>3738.68</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_coinbase_BTC-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_coinbase_BTC-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>160</th>
+      <td>ConnorsRSI</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-05-18 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>9248.60</td>
+      <td>9129.44</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_coinbase_ETH-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_coinbase_ETH-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>161</th>
+      <td>ConnorsRSI</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-05-18 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>10031.72</td>
+      <td>9129.44</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_coinbase_ETH-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_coinbase_ETH-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>162</th>
+      <td>ConnorsRSI</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>-70.78</td>
+      <td>-65.40</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_coinbase_BTC-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_coinbase_BTC-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>163</th>
+      <td>ConnorsRSI</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>-24.61</td>
+      <td>-65.40</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_coinbase_BTC-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_coinbase_BTC-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>164</th>
+      <td>ConnorsRSI</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>-73.60</td>
+      <td>-69.67</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_coinbase_ETH-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_coinbase_ETH-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>165</th>
+      <td>ConnorsRSI</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>-51.17</td>
+      <td>-69.67</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_coinbase_ETH-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_coinbase_ETH-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>166</th>
+      <td>ConnorsRSI</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>-79.65</td>
+      <td>-64.99</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_coinbase_BTC-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_coinbase_BTC-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>167</th>
+      <td>ConnorsRSI</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>0.94</td>
+      <td>-64.99</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_coinbase_BTC-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_coinbase_BTC-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>168</th>
+      <td>ConnorsRSI</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>-82.82</td>
+      <td>-69.14</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_coinbase_ETH-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_coinbase_ETH-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>169</th>
+      <td>ConnorsRSI</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>2.49</td>
+      <td>-69.14</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ConnorsRSI_coinbase_ETH-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ConnorsRSI_coinbase_ETH-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>170</th>
+      <td>WilliamsFractal</td>
+      <td>SNP</td>
+      <td>^GSPC</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>-0.17</td>
+      <td>163.84</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_SNP_^GSPC_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_SNP_^GSPC_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>171</th>
+      <td>WilliamsFractal</td>
+      <td>SNP</td>
+      <td>^GSPC</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>0.17</td>
+      <td>163.84</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_SNP_^GSPC_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_SNP_^GSPC_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>172</th>
+      <td>WilliamsFractal</td>
+      <td>DJI</td>
+      <td>^DJI</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>-1.42</td>
+      <td>191.85</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_DJI_^DJI_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_DJI_^DJI_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>173</th>
+      <td>WilliamsFractal</td>
+      <td>DJI</td>
+      <td>^DJI</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>2.60</td>
+      <td>191.85</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_DJI_^DJI_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_DJI_^DJI_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>174</th>
+      <td>WilliamsFractal</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1D</td>
+      <td>2017-12-02 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>-33.65</td>
+      <td>76.73</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_bitflyer_BTCJPY_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_bitflyer_BTCJPY_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>175</th>
+      <td>WilliamsFractal</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1D</td>
+      <td>2017-12-02 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>20.87</td>
+      <td>76.73</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_bitflyer_BTCJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_bitflyer_BTCJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>176</th>
+      <td>WilliamsFractal</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1D</td>
+      <td>2020-09-19 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>-1.46</td>
+      <td>294.96</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_bitflyer_ETHJPY_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_bitflyer_ETHJPY_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>177</th>
+      <td>WilliamsFractal</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1D</td>
+      <td>2020-09-19 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>2.61</td>
+      <td>294.96</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_bitflyer_ETHJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_bitflyer_ETHJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>178</th>
+      <td>WilliamsFractal</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>1D</td>
+      <td>2019-09-26 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>-2.49</td>
+      <td>786.61</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_bitflyer_ETH-JPY-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_bitflyer_ETH-JPY-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>179</th>
+      <td>WilliamsFractal</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>1D</td>
+      <td>2019-09-26 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>3.70</td>
+      <td>786.61</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_bitflyer_ETH-JPY-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_bitflyer_ETH-JPY-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>180</th>
+      <td>WilliamsFractal</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>4H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>56.87</td>
+      <td>77.11</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_bitflyer_BTCJPY_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_bitflyer_BTCJPY_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>181</th>
+      <td>WilliamsFractal</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>4H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>56.87</td>
+      <td>77.11</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_bitflyer_BTCJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_bitflyer_BTCJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>182</th>
+      <td>WilliamsFractal</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>4H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>5.11</td>
+      <td>294.40</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_bitflyer_ETHJPY_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_bitflyer_ETHJPY_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>183</th>
+      <td>WilliamsFractal</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>4H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>5.11</td>
+      <td>294.40</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_bitflyer_ETHJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_bitflyer_ETHJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>184</th>
+      <td>WilliamsFractal</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>-42.18</td>
+      <td>76.26</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_bitflyer_BTCJPY_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_bitflyer_BTCJPY_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>185</th>
+      <td>WilliamsFractal</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>34.27</td>
+      <td>76.26</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_bitflyer_BTCJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_bitflyer_BTCJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>186</th>
+      <td>WilliamsFractal</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>-3.01</td>
+      <td>292.60</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_bitflyer_ETHJPY_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_bitflyer_ETHJPY_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>187</th>
+      <td>WilliamsFractal</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>5.75</td>
+      <td>292.60</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_bitflyer_ETHJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_bitflyer_ETHJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>188</th>
+      <td>WilliamsFractal</td>
+      <td>bitflyer</td>
+      <td>BTC-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>-32.96</td>
+      <td>-59.00</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_bitflyer_BTC-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_bitflyer_BTC-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>189</th>
+      <td>WilliamsFractal</td>
+      <td>bitflyer</td>
+      <td>BTC-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>-4.98</td>
+      <td>-59.00</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_bitflyer_BTC-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_bitflyer_BTC-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>190</th>
+      <td>WilliamsFractal</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>-3.38</td>
+      <td>-63.78</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_bitflyer_ETH-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_bitflyer_ETH-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>191</th>
+      <td>WilliamsFractal</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>0.53</td>
+      <td>-63.78</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_bitflyer_ETH-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_bitflyer_ETH-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>192</th>
+      <td>WilliamsFractal</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-01-01 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>-6.75</td>
+      <td>3738.68</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_coinbase_BTC-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_coinbase_BTC-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>193</th>
+      <td>WilliamsFractal</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-01-01 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>3.48</td>
+      <td>3738.68</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_coinbase_BTC-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_coinbase_BTC-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>194</th>
+      <td>WilliamsFractal</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-05-18 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>-0.33</td>
+      <td>9129.44</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_coinbase_ETH-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_coinbase_ETH-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>195</th>
+      <td>WilliamsFractal</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-05-18 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>0.41</td>
+      <td>9129.44</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_coinbase_ETH-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_coinbase_ETH-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>196</th>
+      <td>WilliamsFractal</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>-0.69</td>
+      <td>-65.40</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_coinbase_BTC-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_coinbase_BTC-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>197</th>
+      <td>WilliamsFractal</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>-0.69</td>
+      <td>-65.40</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_coinbase_BTC-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_coinbase_BTC-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>198</th>
+      <td>WilliamsFractal</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>-0.26</td>
+      <td>-69.67</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_coinbase_ETH-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_coinbase_ETH-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>199</th>
+      <td>WilliamsFractal</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>-0.08</td>
+      <td>-69.67</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_coinbase_ETH-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_coinbase_ETH-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>200</th>
+      <td>WilliamsFractal</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>-4.96</td>
+      <td>-64.99</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_coinbase_BTC-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_coinbase_BTC-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>201</th>
+      <td>WilliamsFractal</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>-0.31</td>
+      <td>-64.99</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_coinbase_BTC-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_coinbase_BTC-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>202</th>
+      <td>WilliamsFractal</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>-0.44</td>
+      <td>-69.14</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_coinbase_ETH-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_coinbase_ETH-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>203</th>
+      <td>WilliamsFractal</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>-0.02</td>
+      <td>-69.14</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_WilliamsFractal_coinbase_ETH-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_WilliamsFractal_coinbase_ETH-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>204</th>
+      <td>GoldenDeadCross</td>
+      <td>SNP</td>
+      <td>^GSPC</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>-57.53</td>
+      <td>163.84</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_SNP_^GSPC_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_SNP_^GSPC_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>205</th>
+      <td>GoldenDeadCross</td>
+      <td>SNP</td>
+      <td>^GSPC</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>43.40</td>
+      <td>163.84</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_SNP_^GSPC_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_SNP_^GSPC_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>206</th>
+      <td>GoldenDeadCross</td>
+      <td>DJI</td>
+      <td>^DJI</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>-71.28</td>
+      <td>191.85</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_DJI_^DJI_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_DJI_^DJI_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>207</th>
+      <td>GoldenDeadCross</td>
+      <td>DJI</td>
+      <td>^DJI</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>40.29</td>
+      <td>191.85</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_DJI_^DJI_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_DJI_^DJI_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>208</th>
+      <td>GoldenDeadCross</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1D</td>
+      <td>2017-12-02 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>36.76</td>
+      <td>76.73</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_bitflyer_BTCJPY_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_bitflyer_BTCJPY_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>209</th>
+      <td>GoldenDeadCross</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1D</td>
+      <td>2017-12-02 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>379.85</td>
+      <td>76.73</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_bitflyer_BTCJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_bitflyer_BTCJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>210</th>
+      <td>GoldenDeadCross</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1D</td>
+      <td>2020-09-19 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>231.45</td>
+      <td>294.96</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_bitflyer_ETHJPY_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_bitflyer_ETHJPY_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>211</th>
+      <td>GoldenDeadCross</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1D</td>
+      <td>2020-09-19 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>223.97</td>
+      <td>294.96</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_bitflyer_ETHJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_bitflyer_ETHJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>212</th>
+      <td>GoldenDeadCross</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>1D</td>
+      <td>2019-09-26 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>483.32</td>
+      <td>786.61</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_bitflyer_ETH-JPY-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_bitflyer_ETH-JPY-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>213</th>
+      <td>GoldenDeadCross</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>1D</td>
+      <td>2019-09-26 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>2889.15</td>
+      <td>786.61</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_bitflyer_ETH-JPY-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_bitflyer_ETH-JPY-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>214</th>
+      <td>GoldenDeadCross</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>4H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>408.51</td>
+      <td>77.11</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_bitflyer_BTCJPY_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_bitflyer_BTCJPY_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>215</th>
+      <td>GoldenDeadCross</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>4H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>943.72</td>
+      <td>77.11</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_bitflyer_BTCJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_bitflyer_BTCJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>216</th>
+      <td>GoldenDeadCross</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>4H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>7.00</td>
+      <td>294.40</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_bitflyer_ETHJPY_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_bitflyer_ETHJPY_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>217</th>
+      <td>GoldenDeadCross</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>4H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>125.64</td>
+      <td>294.40</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_bitflyer_ETHJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_bitflyer_ETHJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>218</th>
+      <td>GoldenDeadCross</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>3273.44</td>
+      <td>76.26</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_bitflyer_BTCJPY_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_bitflyer_BTCJPY_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>219</th>
+      <td>GoldenDeadCross</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>4628.94</td>
+      <td>76.26</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_bitflyer_BTCJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_bitflyer_BTCJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>220</th>
+      <td>GoldenDeadCross</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>88.86</td>
+      <td>292.60</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_bitflyer_ETHJPY_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_bitflyer_ETHJPY_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>221</th>
+      <td>GoldenDeadCross</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>1044.76</td>
+      <td>292.60</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_bitflyer_ETHJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_bitflyer_ETHJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>222</th>
+      <td>GoldenDeadCross</td>
+      <td>bitflyer</td>
+      <td>BTC-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>-58.54</td>
+      <td>-59.00</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_bitflyer_BTC-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_bitflyer_BTC-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>223</th>
+      <td>GoldenDeadCross</td>
+      <td>bitflyer</td>
+      <td>BTC-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>-10.40</td>
+      <td>-59.00</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_bitflyer_BTC-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_bitflyer_BTC-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>224</th>
+      <td>GoldenDeadCross</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>-68.44</td>
+      <td>-63.78</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_bitflyer_ETH-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_bitflyer_ETH-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>225</th>
+      <td>GoldenDeadCross</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>163.39</td>
+      <td>-63.78</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_bitflyer_ETH-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_bitflyer_ETH-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>226</th>
+      <td>GoldenDeadCross</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-01-01 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>137.43</td>
+      <td>3738.68</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_coinbase_BTC-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_coinbase_BTC-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>227</th>
+      <td>GoldenDeadCross</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-01-01 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>589.54</td>
+      <td>3738.68</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_coinbase_BTC-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_coinbase_BTC-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>228</th>
+      <td>GoldenDeadCross</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>-53.13</td>
+      <td>-65.40</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_coinbase_BTC-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_coinbase_BTC-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>229</th>
+      <td>GoldenDeadCross</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>-11.20</td>
+      <td>-65.40</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_coinbase_BTC-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_coinbase_BTC-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>230</th>
+      <td>GoldenDeadCross</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>-58.45</td>
+      <td>-69.67</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_coinbase_ETH-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_coinbase_ETH-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>231</th>
+      <td>GoldenDeadCross</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>5.01</td>
+      <td>-69.67</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_coinbase_ETH-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_coinbase_ETH-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>232</th>
+      <td>GoldenDeadCross</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>-39.89</td>
+      <td>-64.99</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_coinbase_BTC-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_coinbase_BTC-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>233</th>
+      <td>GoldenDeadCross</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>49.17</td>
+      <td>-64.99</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_coinbase_BTC-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_coinbase_BTC-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>234</th>
+      <td>GoldenDeadCross</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>-25.26</td>
+      <td>-69.14</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_coinbase_ETH-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_coinbase_ETH-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>235</th>
+      <td>GoldenDeadCross</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>91.07</td>
+      <td>-69.14</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_GoldenDeadCross_coinbase_ETH-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_GoldenDeadCross_coinbase_ETH-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>236</th>
+      <td>ParabolicTradingSystem</td>
+      <td>SNP</td>
+      <td>^GSPC</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>2.95</td>
+      <td>163.84</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_SNP_^GSPC_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_SNP_^GSPC_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>237</th>
+      <td>ParabolicTradingSystem</td>
+      <td>SNP</td>
+      <td>^GSPC</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>4.50</td>
+      <td>163.84</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_SNP_^GSPC_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_SNP_^GSPC_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>238</th>
+      <td>ParabolicTradingSystem</td>
+      <td>DJI</td>
+      <td>^DJI</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>10.80</td>
+      <td>191.85</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_DJI_^DJI_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_DJI_^DJI_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>239</th>
+      <td>ParabolicTradingSystem</td>
+      <td>DJI</td>
+      <td>^DJI</td>
+      <td>1D</td>
+      <td>2000-01-03 00:00:00</td>
+      <td>2022-12-30 00:00:00</td>
+      <td>23.41</td>
+      <td>191.85</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_DJI_^DJI_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_DJI_^DJI_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>240</th>
+      <td>ParabolicTradingSystem</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1D</td>
+      <td>2017-12-02 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>29.85</td>
+      <td>76.73</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_bitflyer_BTCJPY_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_bitflyer_BTCJPY_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>241</th>
+      <td>ParabolicTradingSystem</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1D</td>
+      <td>2017-12-02 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>65.93</td>
+      <td>76.73</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_bitflyer_BTCJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_bitflyer_BTCJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>242</th>
+      <td>ParabolicTradingSystem</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1D</td>
+      <td>2020-09-19 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>6.84</td>
+      <td>294.96</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_bitflyer_ETHJPY_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_bitflyer_ETHJPY_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>243</th>
+      <td>ParabolicTradingSystem</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1D</td>
+      <td>2020-09-19 00:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>64.61</td>
+      <td>294.96</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_bitflyer_ETHJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_bitflyer_ETHJPY_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>244</th>
+      <td>ParabolicTradingSystem</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>1D</td>
+      <td>2019-09-26 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>-8.22</td>
+      <td>786.61</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_bitflyer_ETH-JPY-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_bitflyer_ETH-JPY-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>245</th>
+      <td>ParabolicTradingSystem</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>1D</td>
+      <td>2019-09-26 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>109.50</td>
+      <td>786.61</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_bitflyer_ETH-JPY-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_bitflyer_ETH-JPY-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>246</th>
+      <td>ParabolicTradingSystem</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>4H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>7.25</td>
+      <td>77.11</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_bitflyer_BTCJPY_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_bitflyer_BTCJPY_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>247</th>
+      <td>ParabolicTradingSystem</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>4H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>44.16</td>
+      <td>77.11</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_bitflyer_BTCJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_bitflyer_BTCJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>248</th>
+      <td>ParabolicTradingSystem</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>4H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>4.96</td>
+      <td>294.40</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_bitflyer_ETHJPY_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_bitflyer_ETHJPY_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>249</th>
+      <td>ParabolicTradingSystem</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>4H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>48.01</td>
+      <td>294.40</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_bitflyer_ETHJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_bitflyer_ETHJPY_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>250</th>
+      <td>ParabolicTradingSystem</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>12.92</td>
+      <td>76.26</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_bitflyer_BTCJPY_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_bitflyer_BTCJPY_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>251</th>
+      <td>ParabolicTradingSystem</td>
+      <td>bitflyer</td>
+      <td>BTCJPY</td>
+      <td>1H</td>
+      <td>2017-12-02 04:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>199.12</td>
+      <td>76.26</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_bitflyer_BTCJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_bitflyer_BTCJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>252</th>
+      <td>ParabolicTradingSystem</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>1.04</td>
+      <td>292.60</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_bitflyer_ETHJPY_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_bitflyer_ETHJPY_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>253</th>
+      <td>ParabolicTradingSystem</td>
+      <td>bitflyer</td>
+      <td>ETHJPY</td>
+      <td>1H</td>
+      <td>2020-09-19 12:00:00</td>
+      <td>2023-01-04 00:00:00</td>
+      <td>54.09</td>
+      <td>292.60</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_bitflyer_ETHJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_bitflyer_ETHJPY_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>254</th>
+      <td>ParabolicTradingSystem</td>
+      <td>bitflyer</td>
+      <td>BTC-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>0.00</td>
+      <td>-59.00</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_bitflyer_BTC-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_bitflyer_BTC-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>255</th>
+      <td>ParabolicTradingSystem</td>
+      <td>bitflyer</td>
+      <td>BTC-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>0.00</td>
+      <td>-59.00</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_bitflyer_BTC-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_bitflyer_BTC-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>256</th>
+      <td>ParabolicTradingSystem</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>0.00</td>
+      <td>-63.78</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_bitflyer_ETH-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_bitflyer_ETH-JPY-SPOT_15min.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>257</th>
+      <td>ParabolicTradingSystem</td>
+      <td>bitflyer</td>
+      <td>ETH-JPY-SPOT</td>
+      <td>15min</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:45:00</td>
+      <td>0.00</td>
+      <td>-63.78</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_bitflyer_ETH-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_bitflyer_ETH-JPY-SPOT_15min_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>258</th>
+      <td>ParabolicTradingSystem</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-01-01 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>76.56</td>
+      <td>3738.68</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_coinbase_BTC-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_coinbase_BTC-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>259</th>
+      <td>ParabolicTradingSystem</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-01-01 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>73.98</td>
+      <td>3738.68</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_coinbase_BTC-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_coinbase_BTC-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>260</th>
+      <td>ParabolicTradingSystem</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-05-18 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>176.48</td>
+      <td>9129.44</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_coinbase_ETH-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_coinbase_ETH-USD-SPOT_1D.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>261</th>
+      <td>ParabolicTradingSystem</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1D</td>
+      <td>2016-05-18 00:00:00</td>
+      <td>2023-01-03 00:00:00</td>
+      <td>555.34</td>
+      <td>9129.44</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_coinbase_ETH-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_coinbase_ETH-USD-SPOT_1D_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>262</th>
+      <td>ParabolicTradingSystem</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>0.00</td>
+      <td>-65.40</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_coinbase_BTC-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_coinbase_BTC-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>263</th>
+      <td>ParabolicTradingSystem</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>0.00</td>
+      <td>-65.40</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_coinbase_BTC-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_coinbase_BTC-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>264</th>
+      <td>ParabolicTradingSystem</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>0.00</td>
+      <td>-69.67</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_coinbase_ETH-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_coinbase_ETH-USD-SPOT_4H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>265</th>
+      <td>ParabolicTradingSystem</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>4H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 12:00:00</td>
+      <td>0.00</td>
+      <td>-69.67</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_coinbase_ETH-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_coinbase_ETH-USD-SPOT_4H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>266</th>
+      <td>ParabolicTradingSystem</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>0.00</td>
+      <td>-64.99</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_coinbase_BTC-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_coinbase_BTC-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>267</th>
+      <td>ParabolicTradingSystem</td>
+      <td>coinbase</td>
+      <td>BTC-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>0.00</td>
+      <td>-64.99</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_coinbase_BTC-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_coinbase_BTC-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>268</th>
+      <td>ParabolicTradingSystem</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>0.00</td>
+      <td>-69.14</td>
+      <td>False</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_coinbase_ETH-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_coinbase_ETH-USD-SPOT_1H.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+    <tr>
+      <th>269</th>
+      <td>ParabolicTradingSystem</td>
+      <td>coinbase</td>
+      <td>ETH-USD-SPOT</td>
+      <td>1H</td>
+      <td>2021-12-11 00:00:00</td>
+      <td>2023-01-03 13:00:00</td>
+      <td>0.00</td>
+      <td>-69.14</td>
+      <td>True</td>
+      <td><a href="./MarketWatcher/output/backtest/plot_ParabolicTradingSystem_coinbase_ETH-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">plot</a></td>
+      <td><a href="./MarketWatcher/output/backtest/stats_ParabolicTradingSystem_coinbase_ETH-USD-SPOT_1H_opt_skopt.html" target="_blank" rel="noopener noreferrer">table</a></td>
+      <td>2023-01-04 03:40:41</td>
+    </tr>
+  </tbody>
+</table> <!-- table -->
+            </body>
+            <link href="https://cdn.jsdelivr.net/gh/tofsjonas/sortable/sortable.min.css" rel="stylesheet" />
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/tofsjonas/sortable/sortable.min.js"></script>
+            </html>
+        

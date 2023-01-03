@@ -1,0 +1,375 @@
+
+            <!DOCTYPE html>
+            <html>
+            <style>
+              table {text-align: right;}
+              table thead th {text-align: center;}
+            </style>
+            <head>
+              <meta charset="UTF-8">
+              <title>Backtesting</title>
+            </head>
+            <body>
+              <h1>stats</h1>
+              <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>GoldenCross_bitflyer_ETHJPY_1D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Start</th>
+      <td>2020-09-19 00:00:00</td>
+    </tr>
+    <tr>
+      <th>End</th>
+      <td>2023-01-04 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Duration</th>
+      <td>837 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Exposure Time [%]</th>
+      <td>94.27207637231504</td>
+    </tr>
+    <tr>
+      <th>Equity Final [$]</th>
+      <td>36606924.10490002</td>
+    </tr>
+    <tr>
+      <th>Equity Peak [$]</th>
+      <td>125583410.157</td>
+    </tr>
+    <tr>
+      <th>Return [%]</th>
+      <td>266.06924104900014</td>
+    </tr>
+    <tr>
+      <th>Buy & Hold Return [%]</th>
+      <td>294.96100928823324</td>
+    </tr>
+    <tr>
+      <th>Return (Ann.) [%]</th>
+      <td>75.98112452010923</td>
+    </tr>
+    <tr>
+      <th>Volatility (Ann.) [%]</th>
+      <td>199.23370930855575</td>
+    </tr>
+    <tr>
+      <th>Sharpe Ratio</th>
+      <td>0.3813668117900486</td>
+    </tr>
+    <tr>
+      <th>Sortino Ratio</th>
+      <td>1.2297381578412054</td>
+    </tr>
+    <tr>
+      <th>Calmar Ratio</th>
+      <td>0.9932955553789747</td>
+    </tr>
+    <tr>
+      <th>Max. Drawdown [%]</th>
+      <td>-76.49397413352962</td>
+    </tr>
+    <tr>
+      <th>Avg. Drawdown [%]</th>
+      <td>-10.587329577691355</td>
+    </tr>
+    <tr>
+      <th>Max. Drawdown Duration</th>
+      <td>419 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Avg. Drawdown Duration</th>
+      <td>25 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th># Trades</th>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>Win Rate [%]</th>
+      <td>58.82352941176471</td>
+    </tr>
+    <tr>
+      <th>Best Trade [%]</th>
+      <td>202.6485927720326</td>
+    </tr>
+    <tr>
+      <th>Worst Trade [%]</th>
+      <td>-49.94447286506216</td>
+    </tr>
+    <tr>
+      <th>Avg. Trade [%]</th>
+      <td>7.936745333008077</td>
+    </tr>
+    <tr>
+      <th>Max. Trade Duration</th>
+      <td>113 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Avg. Trade Duration</th>
+      <td>47 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Profit Factor</th>
+      <td>3.2726181840730306</td>
+    </tr>
+    <tr>
+      <th>Expectancy [%]</th>
+      <td>16.232223069790415</td>
+    </tr>
+    <tr>
+      <th>SQN</th>
+      <td>0.3843104717069747</td>
+    </tr>
+  </tbody>
+</table> <!-- table -->
+              <h1>trades</h1>
+              <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>Size</th>
+      <th>EntryBar</th>
+      <th>ExitBar</th>
+      <th>EntryPrice</th>
+      <th>ExitPrice</th>
+      <th>PnL</th>
+      <th>ReturnPct</th>
+      <th>EntryTime</th>
+      <th>ExitTime</th>
+      <th>Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>230</td>
+      <td>48</td>
+      <td>89</td>
+      <td>43,328.33</td>
+      <td>65,513.00</td>
+      <td>5,102,473.55</td>
+      <td>0.51</td>
+      <td>2020-11-06</td>
+      <td>2020-12-17</td>
+      <td>41 days</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>230</td>
+      <td>89</td>
+      <td>173</td>
+      <td>65,519.55</td>
+      <td>198,294.00</td>
+      <td>30,538,123.20</td>
+      <td>2.03</td>
+      <td>2020-12-17</td>
+      <td>2021-03-11</td>
+      <td>84 days</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>230</td>
+      <td>173</td>
+      <td>195</td>
+      <td>198,313.83</td>
+      <td>217,603.00</td>
+      <td>4,436,509.24</td>
+      <td>0.10</td>
+      <td>2021-03-11</td>
+      <td>2021-04-02</td>
+      <td>22 days</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>230</td>
+      <td>195</td>
+      <td>290</td>
+      <td>217,624.76</td>
+      <td>247,468.00</td>
+      <td>6,863,945.13</td>
+      <td>0.14</td>
+      <td>2021-04-02</td>
+      <td>2021-07-06</td>
+      <td>95 days</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>230</td>
+      <td>290</td>
+      <td>311</td>
+      <td>247,492.75</td>
+      <td>248,032.00</td>
+      <td>124,028.24</td>
+      <td>0.00</td>
+      <td>2021-07-06</td>
+      <td>2021-07-27</td>
+      <td>21 days</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>230</td>
+      <td>311</td>
+      <td>381</td>
+      <td>248,056.80</td>
+      <td>374,107.00</td>
+      <td>28,991,545.26</td>
+      <td>0.51</td>
+      <td>2021-07-27</td>
+      <td>2021-10-05</td>
+      <td>70 days</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>230</td>
+      <td>381</td>
+      <td>441</td>
+      <td>374,144.41</td>
+      <td>460,038.00</td>
+      <td>19,755,525.54</td>
+      <td>0.23</td>
+      <td>2021-10-05</td>
+      <td>2021-12-04</td>
+      <td>60 days</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>229</td>
+      <td>441</td>
+      <td>466</td>
+      <td>460,084.00</td>
+      <td>438,623.00</td>
+      <td>-4,914,569.87</td>
+      <td>-0.05</td>
+      <td>2021-12-04</td>
+      <td>2021-12-29</td>
+      <td>25 days</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>230</td>
+      <td>466</td>
+      <td>506</td>
+      <td>438,666.86</td>
+      <td>354,187.00</td>
+      <td>-19,430,368.33</td>
+      <td>-0.19</td>
+      <td>2021-12-29</td>
+      <td>2022-02-07</td>
+      <td>40 days</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>229</td>
+      <td>506</td>
+      <td>545</td>
+      <td>354,222.42</td>
+      <td>330,400.00</td>
+      <td>-5,455,333.88</td>
+      <td>-0.07</td>
+      <td>2022-02-07</td>
+      <td>2022-03-18</td>
+      <td>39 days</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>230</td>
+      <td>545</td>
+      <td>658</td>
+      <td>330,433.04</td>
+      <td>165,400.00</td>
+      <td>-37,957,599.20</td>
+      <td>-0.50</td>
+      <td>2022-03-18</td>
+      <td>2022-07-09</td>
+      <td>113 days</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>230</td>
+      <td>658</td>
+      <td>666</td>
+      <td>165,416.54</td>
+      <td>186,179.00</td>
+      <td>4,775,365.80</td>
+      <td>0.13</td>
+      <td>2022-07-09</td>
+      <td>2022-07-17</td>
+      <td>8 days</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>230</td>
+      <td>666</td>
+      <td>721</td>
+      <td>186,197.62</td>
+      <td>248,244.00</td>
+      <td>14,270,667.88</td>
+      <td>0.33</td>
+      <td>2022-07-17</td>
+      <td>2022-09-10</td>
+      <td>55 days</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>229</td>
+      <td>721</td>
+      <td>751</td>
+      <td>248,268.82</td>
+      <td>192,694.00</td>
+      <td>-12,726,634.79</td>
+      <td>-0.22</td>
+      <td>2022-09-10</td>
+      <td>2022-10-10</td>
+      <td>30 days</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>230</td>
+      <td>751</td>
+      <td>758</td>
+      <td>192,713.27</td>
+      <td>193,130.00</td>
+      <td>95,848.04</td>
+      <td>0.00</td>
+      <td>2022-10-10</td>
+      <td>2022-10-17</td>
+      <td>7 days</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>230</td>
+      <td>758</td>
+      <td>806</td>
+      <td>193,149.31</td>
+      <td>169,118.00</td>
+      <td>-5,527,201.99</td>
+      <td>-0.12</td>
+      <td>2022-10-17</td>
+      <td>2022-12-04</td>
+      <td>48 days</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>230</td>
+      <td>806</td>
+      <td>837</td>
+      <td>169,134.91</td>
+      <td>158,981.00</td>
+      <td>-2,335,399.71</td>
+      <td>-0.06</td>
+      <td>2022-12-04</td>
+      <td>2023-01-04</td>
+      <td>31 days</td>
+    </tr>
+  </tbody>
+</table> <!-- table -->
+            </body>
+            </html>
+        

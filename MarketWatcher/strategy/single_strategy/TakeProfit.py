@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+
+from .BaseStrategy import BaseStrategy
+from logging import getLogger
+logger = getLogger(__name__)
+
+class TakeProfit(BaseStrategy):
+    def __init__(self, broker, data, params):
+        self.TakeProfit_minimum_holding_timeperiod = 30
+        self.DeadCross_timeperiod_long = 25
+        self.set_optimization_parameter(
+            DeadCross_timeperiod_short=range(5, 25, 5),
+            DeadCross_timeperiod_long=range(25, 50, 5)
+        )
+        super().__init__(broker, data, params)
+        self.strategy_name = 'TakeProfit'
+
+    def init(self):
+        super().init()
+        self.ma_short = self.metrics.SMA(self.data, self.df_freq, self.DeadCross_timeperiod_short)
+        self.ma_long = self.metrics.SMA(self.data, self.df_freq, self.DeadCross_timeperiod_long)
+
+    def next(self):
+        super().next()
+        if crossover(self.ma_long, self.ma_short):
+            self.position.close()
+            self.sell()
