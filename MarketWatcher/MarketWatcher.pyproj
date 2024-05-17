@@ -1,0 +1,169 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>8f58e356-37c8-4f2f-b760-9097e68550ae</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>test\test_strategy.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>MarketWatcher</Name>
+    <RootNamespace>MarketWatcher</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="api\APIManager.py" />
+    <Compile Include="api\BaseAPI.py" />
+    <Compile Include="api\BaseSelenium.py" />
+    <Compile Include="api\bybitFunding.py" />
+    <Compile Include="api\CommitmentsOfTradersManager.py" />
+    <Compile Include="api\FundingRateAPIManager.py" />
+    <Compile Include="api\OHLCVAPIManager.py" />
+    <Compile Include="api\phemexFunding.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="api\__init__.py" />
+    <Compile Include="database\BaseDataBaseTableManager.py" />
+    <Compile Include="database\CommitmentsOfTradersLongFormatTableManager.py" />
+    <Compile Include="database\CommitmentsOfTradersShortFormatTableManager.py" />
+    <Compile Include="database\FundingRateTableManager.py" />
+    <Compile Include="database\FXTableManager.py" />
+    <Compile Include="database\OHLCVTableManager.py" />
+    <Compile Include="database\StatsTableManager.py" />
+    <Compile Include="database\TradeTableManager.py" />
+    <Compile Include="database\__init__.py" />
+    <Compile Include="main.py" />
+    <Compile Include="metrics\Metrics.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="run_backtest.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="run_update_db.py" />
+    <Compile Include="strategy\BacktestRunner.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="strategy\joint_strategy\ATRScalping.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="strategy\joint_strategy\ModifiedStrategy.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="strategy\joint_strategy\TPSLStrategy.py" />
+    <Compile Include="strategy\single_strategy\BaseStrategy.py" />
+    <Compile Include="strategy\single_strategy\BuyTheDips.py" />
+    <Compile Include="strategy\single_strategy\ChannelBreakOut.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="strategy\single_strategy\DeadCross.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="strategy\single_strategy\DollarCostAveraging.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="strategy\single_strategy\ExperimentalStrategy.py" />
+    <Compile Include="strategy\single_strategy\FundingRateHedge.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="strategy\single_strategy\FuturesGap.py" />
+    <Compile Include="strategy\single_strategy\GoldenCross.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="strategy\joint_strategy\GoldenDeadCross.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="strategy\joint_strategy\JointStrategy.py" />
+    <Compile Include="strategy\joint_strategy\ParabolicTradingSystem.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="strategy\single_strategy\Indicator.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="strategy\single_strategy\MACD.py" />
+    <Compile Include="strategy\single_strategy\PerfectOrder.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="strategy\single_strategy\RSI.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="strategy\single_strategy\SellTheRips.py" />
+    <Compile Include="strategy\single_strategy\Stochastics.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="strategy\single_strategy\StopLoss.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="strategy\single_strategy\Swing.py" />
+    <Compile Include="strategy\single_strategy\TakeProfit.py" />
+    <Compile Include="strategy\single_strategy\Trailing.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="strategy\single_strategy\TrendFollow.py" />
+    <Compile Include="strategy\single_strategy\WilliamsFractal.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\test_cot_analysis.py" />
+    <Compile Include="test\test_phemex_funding.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\test_strategy.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\test_strategy_replication.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\test_trader.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test\test_select_ohlcv.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="trader\BaseTrader.py" />
+    <Compile Include="trader\BybitTrader.py" />
+    <Compile Include="trader\PhemexTrader.py" />
+    <Compile Include="trader\__init__.py" />
+    <Compile Include="util\string_util.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="api\" />
+    <Folder Include="config\" />
+    <Folder Include="database\" />
+    <Folder Include="metrics\" />
+    <Folder Include="strategy\joint_strategy\" />
+    <Folder Include="strategy\single_strategy\" />
+    <Folder Include="test\" />
+    <Folder Include="strategy\" />
+    <Folder Include="trader\" />
+    <Folder Include="util\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config\config.yml" />
+    <Content Include="config\config_logging.yml" />
+    <Content Include="config\config_logging_test.yml" />
+    <Content Include="config\config_test.yml" />
+    <Content Include="database\MARKET.db" />
+    <Content Include="update_db.bat" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
