@@ -52,6 +52,7 @@ class BaseDataBaseTableManager():
         self.execute(self.sql_vacuum, with_commit=True)
 
     def create_table(self):
+        logger.info('DB execution for table creation started.')
         self.execute(self.sql_create_table, with_commit=True)
 
     def insert(self, insert_data):
