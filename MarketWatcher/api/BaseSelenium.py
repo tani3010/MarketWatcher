@@ -4,6 +4,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 
 from logging import getLogger
@@ -16,7 +17,7 @@ class BaseSelenium():
             self.WAIT_SECOND_CLICK = 1.5
             # self.WAIT_NORMAL = 2
             self.WAIT_NORMAL = 10
-            self.visible = False
+            self.visible = True
             self.driver_option = webdriver.ChromeOptions()
             if not self.visible:
                 self.driver_option.add_argument('--headless')
@@ -29,8 +30,10 @@ class BaseSelenium():
             # self.driver_path = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), self.driver_name))
             # self.driver = webdriver.Chrome(self.driver_path, options=self.driver_option)
            
-            self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=self.driver_option)
-            self.driver.get('https://google.com')
+            # self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=self.driver_option)
+            
+            self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=self.driver_option)
+            # self.driver.get('https://google.com')
 
         except Exception as e:
             logger.error(e.args)
