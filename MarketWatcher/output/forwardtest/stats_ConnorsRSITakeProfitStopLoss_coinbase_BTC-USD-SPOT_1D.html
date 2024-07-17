@@ -1,0 +1,615 @@
+
+            <!DOCTYPE html>
+            <html>
+            <style>
+              table {text-align: right;}
+              table thead th {text-align: center;}
+            </style>
+            <head>
+              <meta charset="UTF-8">
+              <title>Backtesting</title>
+            </head>
+            <body>
+              <h1>stats</h1>
+              <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>ConnorsRSITakeProfitStopLoss_coinbase_BTC-USD-SPOT_1D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Start</th>
+      <td>2016-01-01 00:00:00</td>
+    </tr>
+    <tr>
+      <th>End</th>
+      <td>2024-07-17 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Duration</th>
+      <td>3120 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Exposure Time [%]</th>
+      <td>17.10990067286126</td>
+    </tr>
+    <tr>
+      <th>Equity Initial [$]</th>
+      <td>1000000.0</td>
+    </tr>
+    <tr>
+      <th>Equity Final [$]</th>
+      <td>1519319.0129000049</td>
+    </tr>
+    <tr>
+      <th>Equity Peak [$]</th>
+      <td>1705680.2286500016</td>
+    </tr>
+    <tr>
+      <th>Return [%]</th>
+      <td>51.93190129000048</td>
+    </tr>
+    <tr>
+      <th>Buy & Hold Return [%]</th>
+      <td>14717.773034017353</td>
+    </tr>
+    <tr>
+      <th>Return (Ann.) [%]</th>
+      <td>5.013175675534964</td>
+    </tr>
+    <tr>
+      <th>Volatility (Ann.) [%]</th>
+      <td>29.064547712125833</td>
+    </tr>
+    <tr>
+      <th>Sharpe Ratio</th>
+      <td>0.1724842142801847</td>
+    </tr>
+    <tr>
+      <th>Sortino Ratio</th>
+      <td>0.26595144634435774</td>
+    </tr>
+    <tr>
+      <th>Calmar Ratio</th>
+      <td>0.08340835611631744</td>
+    </tr>
+    <tr>
+      <th>Max. Drawdown [%]</th>
+      <td>-60.10399807597</td>
+    </tr>
+    <tr>
+      <th>Avg. Drawdown [%]</th>
+      <td>-8.199193001861445</td>
+    </tr>
+    <tr>
+      <th>Max. Drawdown Duration</th>
+      <td>2362 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Avg. Drawdown Duration</th>
+      <td>222 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th># Trades</th>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th>Win Rate [%]</th>
+      <td>59.375</td>
+    </tr>
+    <tr>
+      <th>Best Trade [%]</th>
+      <td>23.771136098368096</td>
+    </tr>
+    <tr>
+      <th>Worst Trade [%]</th>
+      <td>-28.997532109983158</td>
+    </tr>
+    <tr>
+      <th>Avg. Trade [%]</th>
+      <td>1.319814995502555</td>
+    </tr>
+    <tr>
+      <th>Max. Trade Duration</th>
+      <td>64 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Avg. Trade Duration</th>
+      <td>17 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Profit Factor</th>
+      <td>1.6231480591018133</td>
+    </tr>
+    <tr>
+      <th>Expectancy [%]</th>
+      <td>1.9004623299907657</td>
+    </tr>
+    <tr>
+      <th>SQN</th>
+      <td>0.6722928390901748</td>
+    </tr>
+    <tr>
+      <th>Kelly Criterion</th>
+      <td>0.16986374040677077</td>
+    </tr>
+    <tr>
+      <th>_parameter</th>
+      <td>{'2016-01-01 00:00:00_2017-09-15 00:00:00': {'ConnorsRSI_shifter': 8, 'ConnorsRSI_timeperiod': 5, 'ConnorsRSI_count': 2, 'ConnorsRSI_percentage_rank': 104, 'ConnorsRSI_lower_threshold': 11, 'ConnorsRSI_upper_threshold': 80, 'TakeProfit_minimum_holding_timeperiod': 12, 'TakeProfit_take_profit_level_pct': 0.06345401268831227, 'StopLoss_minimum_holding_timeperiod': 42, 'StopLoss_loss_cut_level_pct': -0.051107049528077673}, '2017-09-16 00:00:00_2019-06-01 00:00:00': {'ConnorsRSI_shifter': 8, 'ConnorsRSI_timeperiod': 5, 'ConnorsRSI_count': 2, 'ConnorsRSI_percentage_rank': 104, 'ConnorsRSI_lower_threshold': 11, 'ConnorsRSI_upper_threshold': 80, 'TakeProfit_minimum_holding_timeperiod': 12, 'TakeProfit_take_profit_level_pct': 0.06345401268831227, 'StopLoss_minimum_holding_timeperiod': 42, 'StopLoss_loss_cut_level_pct': -0.051107049528077673}, '2019-06-02 00:00:00_2021-02-14 00:00:00': {'ConnorsRSI_shifter': 8, 'ConnorsRSI_timeperiod': 6, 'ConnorsRSI_count': 4, 'ConnorsRSI_percentage_rank': 91, 'ConnorsRSI_lower_threshold': 8, 'ConnorsRSI_upper_threshold': 86, 'TakeProfit_minimum_holding_timeperiod': 85, 'TakeProfit_take_profit_level_pct': 0.08068269096687625, 'StopLoss_minimum_holding_timeperiod': 0, 'StopLoss_loss_cut_level_pct': -0.05869071919326038}, '2021-02-15 00:00:00_2022-10-31 00:00:00': {'ConnorsRSI_shifter': 8, 'ConnorsRSI_timeperiod': 5, 'ConnorsRSI_count': 6, 'ConnorsRSI_percentage_rank': 102, 'ConnorsRSI_lower_threshold': 13, 'ConnorsRSI_upper_threshold': 86, 'TakeProfit_minimum_holding_timeperiod': 17, 'TakeProfit_take_profit_level_pct': 0.08838040468977425, 'StopLoss_minimum_holding_timeperiod': 85, 'StopLoss_loss_cut_level_pct': -0.07603204254287414}, '2022-11-01 00:00:00_2024-07-17 00:00:00': {'ConnorsRSI_shifter': 9, 'ConnorsRSI_timeperiod': 8, 'ConnorsRSI_count': 4, 'ConnorsRSI_percentage_rank': 101, 'ConnorsRSI_lower_threshold': 13, 'ConnorsRSI_upper_threshold': 85, 'TakeProfit_minimum_holding_timeperiod': 4, 'TakeProfit_take_profit_level_pct': 0.06574800815040607, 'StopLoss_minimum_holding_timeperiod': 89, 'StopLoss_loss_cut_level_pct': -0.07314765572733758}}</td>
+    </tr>
+  </tbody>
+</table> <!-- table -->
+              <h1>trades</h1>
+              <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>Size</th>
+      <th>EntryBar</th>
+      <th>ExitBar</th>
+      <th>EntryPrice</th>
+      <th>ExitPrice</th>
+      <th>PnL</th>
+      <th>ReturnPct</th>
+      <th>EntryTime</th>
+      <th>ExitTime</th>
+      <th>Tag</th>
+      <th>Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>1678</td>
+      <td>220</td>
+      <td>221</td>
+      <td>595.74</td>
+      <td>591.58</td>
+      <td>-6,972.32</td>
+      <td>-0.70</td>
+      <td>2016-08-08</td>
+      <td>2016-08-09</td>
+      <td>NaN</td>
+      <td>1 days</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1676</td>
+      <td>221</td>
+      <td>222</td>
+      <td>592.17</td>
+      <td>586.75</td>
+      <td>-9,086.57</td>
+      <td>-0.92</td>
+      <td>2016-08-09</td>
+      <td>2016-08-10</td>
+      <td>NaN</td>
+      <td>1 days</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1675</td>
+      <td>222</td>
+      <td>235</td>
+      <td>587.34</td>
+      <td>585.19</td>
+      <td>-3,595.81</td>
+      <td>-0.37</td>
+      <td>2016-08-10</td>
+      <td>2016-08-23</td>
+      <td>NaN</td>
+      <td>13 days</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1673</td>
+      <td>235</td>
+      <td>252</td>
+      <td>585.78</td>
+      <td>627.97</td>
+      <td>70,591.92</td>
+      <td>7.20</td>
+      <td>2016-08-23</td>
+      <td>2016-09-09</td>
+      <td>NaN</td>
+      <td>17 days</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1732</td>
+      <td>273</td>
+      <td>296</td>
+      <td>606.60</td>
+      <td>653.03</td>
+      <td>80,423.71</td>
+      <td>7.65</td>
+      <td>2016-09-30</td>
+      <td>2016-10-23</td>
+      <td>NaN</td>
+      <td>23 days</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1172</td>
+      <td>450</td>
+      <td>463</td>
+      <td>964.68</td>
+      <td>1,194.00</td>
+      <td>268,758.68</td>
+      <td>23.77</td>
+      <td>2017-03-26</td>
+      <td>2017-04-08</td>
+      <td>NaN</td>
+      <td>13 days</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>495</td>
+      <td>569</td>
+      <td>570</td>
+      <td>2,828.10</td>
+      <td>2,755.19</td>
+      <td>-36,088.11</td>
+      <td>-2.58</td>
+      <td>2017-07-23</td>
+      <td>2017-07-24</td>
+      <td>NaN</td>
+      <td>1 days</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>494</td>
+      <td>570</td>
+      <td>583</td>
+      <td>2,757.95</td>
+      <td>3,243.50</td>
+      <td>239,864.08</td>
+      <td>17.61</td>
+      <td>2017-07-24</td>
+      <td>2017-08-06</td>
+      <td>NaN</td>
+      <td>13 days</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>148</td>
+      <td>754</td>
+      <td>755</td>
+      <td>10,835.77</td>
+      <td>11,356.80</td>
+      <td>77,111.71</td>
+      <td>4.81</td>
+      <td>2018-01-24</td>
+      <td>2018-01-25</td>
+      <td>NaN</td>
+      <td>1 days</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>147</td>
+      <td>755</td>
+      <td>798</td>
+      <td>11,368.16</td>
+      <td>9,304.90</td>
+      <td>-303,298.75</td>
+      <td>-18.15</td>
+      <td>2018-01-25</td>
+      <td>2018-03-09</td>
+      <td>NaN</td>
+      <td>43 days</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>166</td>
+      <td>805</td>
+      <td>806</td>
+      <td>8,268.26</td>
+      <td>8,265.72</td>
+      <td>-421.64</td>
+      <td>-0.03</td>
+      <td>2018-03-16</td>
+      <td>2018-03-17</td>
+      <td>NaN</td>
+      <td>1 days</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>166</td>
+      <td>806</td>
+      <td>807</td>
+      <td>8,273.99</td>
+      <td>7,853.12</td>
+      <td>-69,863.71</td>
+      <td>-5.09</td>
+      <td>2018-03-17</td>
+      <td>2018-03-18</td>
+      <td>NaN</td>
+      <td>1 days</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>166</td>
+      <td>807</td>
+      <td>824</td>
+      <td>7,860.97</td>
+      <td>7,424.91</td>
+      <td>-72,386.48</td>
+      <td>-5.55</td>
+      <td>2018-03-18</td>
+      <td>2018-04-04</td>
+      <td>NaN</td>
+      <td>17 days</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>166</td>
+      <td>824</td>
+      <td>837</td>
+      <td>7,432.33</td>
+      <td>8,048.92</td>
+      <td>102,353.12</td>
+      <td>8.30</td>
+      <td>2018-04-04</td>
+      <td>2018-04-17</td>
+      <td>NaN</td>
+      <td>13 days</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>176</td>
+      <td>875</td>
+      <td>899</td>
+      <td>7,591.73</td>
+      <td>6,447.15</td>
+      <td>-201,446.81</td>
+      <td>-15.08</td>
+      <td>2018-05-25</td>
+      <td>2018-06-18</td>
+      <td>NaN</td>
+      <td>24 days</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>176</td>
+      <td>899</td>
+      <td>929</td>
+      <td>6,453.60</td>
+      <td>7,311.38</td>
+      <td>150,969.78</td>
+      <td>13.29</td>
+      <td>2018-06-18</td>
+      <td>2018-07-18</td>
+      <td>NaN</td>
+      <td>30 days</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>209</td>
+      <td>953</td>
+      <td>954</td>
+      <td>6,152.16</td>
+      <td>6,236.00</td>
+      <td>17,523.39</td>
+      <td>1.36</td>
+      <td>2018-08-11</td>
+      <td>2018-08-12</td>
+      <td>NaN</td>
+      <td>1 days</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>208</td>
+      <td>954</td>
+      <td>967</td>
+      <td>6,242.24</td>
+      <td>6,690.88</td>
+      <td>93,317.95</td>
+      <td>7.19</td>
+      <td>2018-08-12</td>
+      <td>2018-08-25</td>
+      <td>NaN</td>
+      <td>13 days</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>214</td>
+      <td>989</td>
+      <td>1022</td>
+      <td>6,525.20</td>
+      <td>6,394.96</td>
+      <td>-27,871.08</td>
+      <td>-2.00</td>
+      <td>2018-09-16</td>
+      <td>2018-10-19</td>
+      <td>NaN</td>
+      <td>33 days</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>213</td>
+      <td>1022</td>
+      <td>1056</td>
+      <td>6,401.35</td>
+      <td>4,545.12</td>
+      <td>-395,378.05</td>
+      <td>-29.00</td>
+      <td>2018-10-19</td>
+      <td>2018-11-22</td>
+      <td>NaN</td>
+      <td>34 days</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>214</td>
+      <td>1056</td>
+      <td>1057</td>
+      <td>4,549.67</td>
+      <td>4,268.18</td>
+      <td>-60,237.82</td>
+      <td>-6.19</td>
+      <td>2018-11-22</td>
+      <td>2018-11-23</td>
+      <td>NaN</td>
+      <td>1 days</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>213</td>
+      <td>1057</td>
+      <td>1058</td>
+      <td>4,272.45</td>
+      <td>4,283.80</td>
+      <td>2,417.94</td>
+      <td>0.27</td>
+      <td>2018-11-23</td>
+      <td>2018-11-24</td>
+      <td>NaN</td>
+      <td>1 days</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>213</td>
+      <td>1058</td>
+      <td>1059</td>
+      <td>4,288.08</td>
+      <td>3,775.00</td>
+      <td>-109,286.85</td>
+      <td>-11.97</td>
+      <td>2018-11-24</td>
+      <td>2018-11-25</td>
+      <td>NaN</td>
+      <td>1 days</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>213</td>
+      <td>1059</td>
+      <td>1085</td>
+      <td>3,778.78</td>
+      <td>4,075.31</td>
+      <td>63,161.96</td>
+      <td>7.85</td>
+      <td>2018-11-25</td>
+      <td>2018-12-21</td>
+      <td>NaN</td>
+      <td>26 days</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>255</td>
+      <td>1131</td>
+      <td>1132</td>
+      <td>3,412.98</td>
+      <td>3,428.41</td>
+      <td>3,934.76</td>
+      <td>0.45</td>
+      <td>2019-02-05</td>
+      <td>2019-02-06</td>
+      <td>NaN</td>
+      <td>1 days</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>254</td>
+      <td>1132</td>
+      <td>1145</td>
+      <td>3,431.84</td>
+      <td>3,867.00</td>
+      <td>110,531.04</td>
+      <td>12.68</td>
+      <td>2019-02-06</td>
+      <td>2019-02-19</td>
+      <td>NaN</td>
+      <td>13 days</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>47</td>
+      <td>2364</td>
+      <td>2365</td>
+      <td>20,557.08</td>
+      <td>20,676.63</td>
+      <td>5,619.01</td>
+      <td>0.58</td>
+      <td>2022-06-22</td>
+      <td>2022-06-23</td>
+      <td>NaN</td>
+      <td>1 days</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>47</td>
+      <td>2365</td>
+      <td>2393</td>
+      <td>20,697.31</td>
+      <td>23,409.99</td>
+      <td>127,496.12</td>
+      <td>13.11</td>
+      <td>2022-06-23</td>
+      <td>2022-07-21</td>
+      <td>NaN</td>
+      <td>28 days</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>55</td>
+      <td>2431</td>
+      <td>2495</td>
+      <td>20,251.33</td>
+      <td>20,831.19</td>
+      <td>31,892.24</td>
+      <td>2.86</td>
+      <td>2022-08-28</td>
+      <td>2022-10-31</td>
+      <td>NaN</td>
+      <td>64 days</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>42</td>
+      <td>2635</td>
+      <td>2658</td>
+      <td>27,018.43</td>
+      <td>29,678.35</td>
+      <td>111,716.58</td>
+      <td>9.84</td>
+      <td>2023-03-20</td>
+      <td>2023-04-12</td>
+      <td>NaN</td>
+      <td>23 days</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>47</td>
+      <td>2699</td>
+      <td>2730</td>
+      <td>26,774.47</td>
+      <td>29,998.28</td>
+      <td>151,519.18</td>
+      <td>12.04</td>
+      <td>2023-05-23</td>
+      <td>2023-06-23</td>
+      <td>NaN</td>
+      <td>31 days</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>54</td>
+      <td>2796</td>
+      <td>2832</td>
+      <td>26,030.16</td>
+      <td>27,994.05</td>
+      <td>106,049.84</td>
+      <td>7.54</td>
+      <td>2023-08-28</td>
+      <td>2023-10-03</td>
+      <td>NaN</td>
+      <td>36 days</td>
+    </tr>
+  </tbody>
+</table> <!-- table -->
+            </body>
+            </html>
+        
