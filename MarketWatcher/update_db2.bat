@@ -22,7 +22,7 @@ git push origin main
 rem ##### remove output #####
 del /S /Q .\MarketWatcher\output\backtest
 del /S /Q .\MarketWatcher\output\forwardtest
-timeout /t 240 > nul
+timeout /t 600 > nul
 
 rem ##### resume dropbox #####
 start "Restart Dropbox" %DROPBOX_PATH%\Dropbox.exe -B
