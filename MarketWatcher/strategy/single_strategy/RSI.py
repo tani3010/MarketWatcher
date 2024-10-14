@@ -36,6 +36,15 @@ class RSI(BaseStrategy):
             self.position.close()
             self.buy()
 
+class RSIRange(RSI):
+    def __init__(self, broker, data, params):
+        super().__init__(broker, data, params)
+        self.RSI_upper_threshold = 75
+        self.strategy_name = 'RSIRange'
+
+    def init(self):
+        self.rsi = self.metrics.RANGE_RSI(self.data, self.df_freq, self.RSI_timeperiod)
+
 class RSIDouble(RSI):
     def __init__(self, broker, data, params):
         super().__init__(broker, data, params)
@@ -64,6 +73,16 @@ class RSIDouble(RSI):
                     trade.close()
             if len(self.trades) == 0:
                 self.buy()
+
+class RSIRangeDouble(RSIDouble):
+    def __init__(self, broker, data, params):
+        super().__init__(broker, data, params)
+        self.RSI_upper_threshold = 75
+        self.strategy_name = 'RSIRangeDouble'
+
+    def init(self):
+        self.rsi_1day = self.metrics.RANGE_RSI(self.data, '1D', self.RSI_timeperiod)
+        self.rsi_4hour = self.metrics.RANGE_RSI(self.data, '4H', self.RSI_timeperiod)
 
 class TrendFollowingRSIDouble(BaseStrategy):
     def __init__(self, broker, data, params):

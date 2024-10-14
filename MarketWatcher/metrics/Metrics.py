@@ -21,6 +21,18 @@ class Metrics(object):
         return resample_apply(rule, self._pct_change, df_ohlcv['Close'], shift, name='pct_change({})')
 
     @staticmethod
+    def _RANGE_RSI(df, timeperiod):
+        df['diff'] = df['Close'] - df['Open']
+        df['HighRange'] = np.where(df['diff'] > 0, df['High'] - df['Open'], 0)
+        df['LowRange'] = np.where(df['diff'] < 0, df['Low'] - df['Open'], 0)
+        high_range_sum = df['HighRange'].rolling(timeperiod).sum()
+        low_range_sum = df['LowRange'].rolling(timeperiod).sum()
+        return high_range_sum / (high_range_sum - low_range_sum) * 100
+
+    def RANGE_RSI(self, df_ohlcv, rule, timeperiod=14):
+        return resample_apply(rule, self._RANGE_RSI, df_ohlcv.df[['Open', 'High', 'Low', 'Close']], timeperiod, name='RANGE_RSI({}, {})')
+
+    @staticmethod
     def _CONNORSRSI(df, timeperiod, bar_count, percentage_rank):
         def STREAKS(series):
             geq = series >= series.shift(1)  # True if rising
