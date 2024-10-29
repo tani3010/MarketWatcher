@@ -33,7 +33,7 @@ class Phemex(BaseSelenium):
         self.navigate(self.URL_BASE)
 
         # tmp = self.driver.find_elements_by_xpath("//li[@class='pr T2 cp ph10 svelte-r327t8']")
-        tmp = self.driver.find_element(By.XPATH, "//li[@class='pr T2 cp ph10 svelte-r327t8']")
+        tmp = self.driver.find_elements(By.XPATH, "//li[@class='pr T2 cp ph10 svelte-slwroa']") # product list
 
         product_count = len(tmp)
         product_list = self.yaml['ExchangeSetting']['phemex']['products']
