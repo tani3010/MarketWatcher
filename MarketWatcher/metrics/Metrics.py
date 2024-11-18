@@ -122,12 +122,12 @@ class Metrics(object):
 
     def MACD(self, df_ohlcv, rule, fastperiod=12, slowperiod=26, signalperiod=9):
         return resample_apply(
-            rule, self._MACD, df_ohlcv.df['Close'], fastperiod, slowperiod, signalperiod, name='MACD({}, {}, {}, {})')
+            rule, self._MACD, df_ohlcv.df['Close'], fastperiod, slowperiod, signalperiod, histogram=[False, False, True], name='MACD({}, {}, {}, {})')
 
     @staticmethod
     def _MACD(df, fastperiod=12, slowperiod=26, signalperiod=9):
         macd, macd_signal, macd_hist = talib.MACD(df, fastperiod=fastperiod, slowperiod=slowperiod, signalperiod=slowperiod)
-        return [macd, macd_signal]
+        return [macd, macd_signal, macd_hist]
 
     @staticmethod
     def _ULTOSC(df, timeperiod1=7, timeperiod2=14, timeperiod3=28):
