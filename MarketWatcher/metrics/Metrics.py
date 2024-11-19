@@ -122,12 +122,33 @@ class Metrics(object):
 
     def MACD(self, df_ohlcv, rule, fastperiod=12, slowperiod=26, signalperiod=9):
         return resample_apply(
-            rule, self._MACD, df_ohlcv.df['Close'], fastperiod, slowperiod, signalperiod, histogram=[False, False, True], name='MACD({}, {}, {}, {})')
+            rule, self._MACD, df_ohlcv.df['Close'], fastperiod, slowperiod, signalperiod,
+            histogram=[False, False, True, True, True, True],
+            color=['#2962FF', '#FF6D00', '#26A69A', '#B2DFDB', '#FF5252', '#FFCDD2'],
+            name='MACD({}, {}, {}, {})')
+
+    @staticmethod
+    def _MACD_old(df, fastperiod=12, slowperiod=26, signalperiod=9):
+        macd, macd_signal, macd_hist = talib.MACD(df, fastperiod=fastperiod, slowperiod=slowperiod, signalperiod=slowperiod)
+        return [macd, macd_signal, macd_hist]
 
     @staticmethod
     def _MACD(df, fastperiod=12, slowperiod=26, signalperiod=9):
         macd, macd_signal, macd_hist = talib.MACD(df, fastperiod=fastperiod, slowperiod=slowperiod, signalperiod=slowperiod)
-        return [macd, macd_signal, macd_hist]
+
+        macd_hist_diff = macd_hist.diff()
+
+        macd_hist_positive_deep = macd_hist.copy()
+        macd_hist_positive_light = macd_hist.copy()
+        macd_hist_negative_deep = macd_hist.copy()
+        macd_hist_negative_light = macd_hist.copy()
+
+        macd_hist_positive_deep = np.where((macd_hist > 0) & (macd_hist_diff > 0), macd_hist.values, np.nan)
+        macd_hist_positive_light = np.where((macd_hist > 0) & (macd_hist_diff < 0), macd_hist.values, np.nan)
+        macd_hist_negative_deep = np.where((macd_hist < 0) & (macd_hist_diff < 0), macd_hist.values, np.nan)
+        macd_hist_negative_light = np.where((macd_hist < 0) & (macd_hist_diff > 0), macd_hist.values, np.nan)
+
+        return [macd, macd_signal, macd_hist_positive_deep, macd_hist_positive_light, macd_hist_negative_deep, macd_hist_negative_light]
 
     @staticmethod
     def _ULTOSC(df, timeperiod1=7, timeperiod2=14, timeperiod3=28):
