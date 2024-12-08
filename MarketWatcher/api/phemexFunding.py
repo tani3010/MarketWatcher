@@ -104,7 +104,7 @@ class Phemex(BaseSelenium):
                         self.driver.execute_script('arguments[0].click();', next_btn)
                         self.wait_expected_condition()
                         count += 1
-                        if count > 1000:
+                        if count > 20:
                             logger.info('[{}][{} pages were loaded][{}] completed.'.format(product_code, count, self.URL_BASE))
                             break
                     except:
