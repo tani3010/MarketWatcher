@@ -74,6 +74,37 @@ class RSIDouble(RSI):
             if len(self.trades) == 0:
                 self.buy()
 
+class RSIDouble4HTakeProfit(RSI):
+    def __init__(self, broker, data, params):
+        super().__init__(broker, data, params)
+        self.RSI_shifter = 5
+        self.RSI_shifter_TP = 1
+        self.strategy_name = 'RSIDouble'
+
+    def init(self):
+        self.rsi_1day = self.metrics.RSI(self.data, '1D', self.RSI_timeperiod)
+        self.rsi_4hour = self.metrics.RSI(self.data, '4H', self.RSI_timeperiod)
+
+    def next(self):
+        if self.data._Data__i < self.RSI_shifter:
+            return
+
+        # if self.rsi_1day[-self.RSI_shifter] >= self.RSI_upper_threshold and self.rsi_4hour[-self.RSI_shifter] >= self.RSI_upper_threshold:
+        if self.rsi_4hour[-self.RSI_shifter_TP] >= self.RSI_upper_threshold:
+            for trade in self.trades:
+                if trade.is_long:
+                    trade.close()
+            #if len(self.trades) == 0:
+            #    self.sell()
+
+        elif self.rsi_1day[-self.RSI_shifter] <= self.RSI_lower_threshold and self.rsi_4hour[-self.RSI_shifter] <= self.RSI_lower_threshold:
+            for trade in self.trades:
+                if trade.is_short:
+                    trade.close()
+            if len(self.trades) == 0:
+                self.buy()
+
+
 class RSIRangeDouble(RSIDouble):
     def __init__(self, broker, data, params):
         super().__init__(broker, data, params)
