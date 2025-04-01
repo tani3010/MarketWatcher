@@ -22,6 +22,9 @@ class BaseTrader(object):
     def import_credential(self, dict_credential=None):
         self.__init__(self.exchange_name, dict_credential)
 
+    def run(self):
+        pass
+
     @staticmethod
     def copy_dict(src_dict, dest_dict):
         for key, value in src_dict.items():
