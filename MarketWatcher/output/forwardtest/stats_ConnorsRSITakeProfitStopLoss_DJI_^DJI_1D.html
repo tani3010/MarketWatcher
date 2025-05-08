@@ -1,0 +1,559 @@
+
+            <!DOCTYPE html>
+            <html>
+            <style>
+              table {text-align: right;}
+              table thead th {text-align: center;}
+            </style>
+            <head>
+              <meta charset="UTF-8">
+              <title>Backtesting</title>
+            </head>
+            <body>
+              <h1>stats</h1>
+              <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>ConnorsRSITakeProfitStopLoss_DJI_^DJI_1D</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Start</th>
+      <td>2000-01-03 00:00:00</td>
+    </tr>
+    <tr>
+      <th>End</th>
+      <td>2025-02-14 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Duration</th>
+      <td>9174 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Exposure Time [%]</th>
+      <td>22.64598828928628</td>
+    </tr>
+    <tr>
+      <th>Equity Initial [$]</th>
+      <td>1000000.0</td>
+    </tr>
+    <tr>
+      <th>Equity Final [$]</th>
+      <td>1561029.1066582028</td>
+    </tr>
+    <tr>
+      <th>Equity Peak [$]</th>
+      <td>1686748.0140781247</td>
+    </tr>
+    <tr>
+      <th>Return [%]</th>
+      <td>56.10291066582028</td>
+    </tr>
+    <tr>
+      <th>Buy & Hold Return [%]</th>
+      <td>292.2169475902594</td>
+    </tr>
+    <tr>
+      <th>Return (Ann.) [%]</th>
+      <td>1.791889990081974</td>
+    </tr>
+    <tr>
+      <th>Volatility (Ann.) [%]</th>
+      <td>10.003241931441526</td>
+    </tr>
+    <tr>
+      <th>Sharpe Ratio</th>
+      <td>0.1791309259900857</td>
+    </tr>
+    <tr>
+      <th>Sortino Ratio</th>
+      <td>0.26837180719228915</td>
+    </tr>
+    <tr>
+      <th>Calmar Ratio</th>
+      <td>0.04349220782312667</td>
+    </tr>
+    <tr>
+      <th>Max. Drawdown [%]</th>
+      <td>-41.20025355735446</td>
+    </tr>
+    <tr>
+      <th>Avg. Drawdown [%]</th>
+      <td>-2.830706461414465</td>
+    </tr>
+    <tr>
+      <th>Max. Drawdown Duration</th>
+      <td>6338 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Avg. Drawdown Duration</th>
+      <td>185 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th># Trades</th>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>Win Rate [%]</th>
+      <td>67.85714285714286</td>
+    </tr>
+    <tr>
+      <th>Best Trade [%]</th>
+      <td>22.48464307954492</td>
+    </tr>
+    <tr>
+      <th>Worst Trade [%]</th>
+      <td>-26.189329032875698</td>
+    </tr>
+    <tr>
+      <th>Avg. Trade [%]</th>
+      <td>1.616928983032162</td>
+    </tr>
+    <tr>
+      <th>Max. Trade Duration</th>
+      <td>298 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Avg. Trade Duration</th>
+      <td>74 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Profit Factor</th>
+      <td>1.9450129400875138</td>
+    </tr>
+    <tr>
+      <th>Expectancy [%]</th>
+      <td>2.003986072250221</td>
+    </tr>
+    <tr>
+      <th>SQN</th>
+      <td>0.9732745050066006</td>
+    </tr>
+    <tr>
+      <th>Kelly Criterion</th>
+      <td>0.2801525210400226</td>
+    </tr>
+    <tr>
+      <th>_parameter</th>
+      <td>{'2000-01-03 00:00:00_2005-01-11 00:00:00': {'ConnorsRSI_shifter': 6, 'ConnorsRSI_timeperiod': 9, 'ConnorsRSI_count': 4, 'ConnorsRSI_percentage_rank': 103, 'ConnorsRSI_lower_threshold': 15, 'ConnorsRSI_upper_threshold': 89, 'TakeProfit_minimum_holding_timeperiod': 68, 'TakeProfit_take_profit_level_pct': 0.0744368438437483, 'StopLoss_minimum_holding_timeperiod': 95, 'StopLoss_loss_cut_level_pct': -0.08611962564845792}, '2005-01-12 00:00:00_2010-01-19 00:00:00': {'ConnorsRSI_shifter': 6, 'ConnorsRSI_timeperiod': 9, 'ConnorsRSI_count': 4, 'ConnorsRSI_percentage_rank': 103, 'ConnorsRSI_lower_threshold': 15, 'ConnorsRSI_upper_threshold': 89, 'TakeProfit_minimum_holding_timeperiod': 68, 'TakeProfit_take_profit_level_pct': 0.0744368438437483, 'StopLoss_minimum_holding_timeperiod': 95, 'StopLoss_loss_cut_level_pct': -0.08611962564845792}, '2010-01-20 00:00:00_2015-01-26 00:00:00': {'ConnorsRSI_shifter': 6, 'ConnorsRSI_timeperiod': 9, 'ConnorsRSI_count': 3, 'ConnorsRSI_percentage_rank': 97, 'ConnorsRSI_lower_threshold': 6, 'ConnorsRSI_upper_threshold': 83, 'TakeProfit_minimum_holding_timeperiod': 6, 'TakeProfit_take_profit_level_pct': 0.08398203823290057, 'StopLoss_minimum_holding_timeperiod': 31, 'StopLoss_loss_cut_level_pct': -0.08192512735224089}, '2015-01-27 00:00:00_2020-01-31 00:00:00': {'ConnorsRSI_shifter': 2, 'ConnorsRSI_timeperiod': 6, 'ConnorsRSI_count': 7, 'ConnorsRSI_percentage_rank': 102, 'ConnorsRSI_lower_threshold': 11, 'ConnorsRSI_upper_threshold': 87, 'TakeProfit_minimum_holding_timeperiod': 8, 'TakeProfit_take_profit_level_pct': 0.05909767021573534, 'StopLoss_minimum_holding_timeperiod': 33, 'StopLoss_loss_cut_level_pct': -0.07316009501142655}, '2020-02-03 00:00:00_2025-02-14 00:00:00': {'ConnorsRSI_shifter': 9, 'ConnorsRSI_timeperiod': 8, 'ConnorsRSI_count': 3, 'ConnorsRSI_percentage_rank': 104, 'ConnorsRSI_lower_threshold': 11, 'ConnorsRSI_upper_threshold': 85, 'TakeProfit_minimum_holding_timeperiod': 8, 'TakeProfit_take_profit_level_pct': 0.07437135609475534, 'StopLoss_minimum_holding_timeperiod': 47, 'StopLoss_loss_cut_level_pct': -0.051042432110910356}}</td>
+    </tr>
+  </tbody>
+</table> <!-- table -->
+              <h1>trades</h1>
+              <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>Size</th>
+      <th>EntryBar</th>
+      <th>ExitBar</th>
+      <th>EntryPrice</th>
+      <th>ExitPrice</th>
+      <th>PnL</th>
+      <th>ReturnPct</th>
+      <th>EntryTime</th>
+      <th>ExitTime</th>
+      <th>Tag</th>
+      <th>Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>93</td>
+      <td>187</td>
+      <td>203</td>
+      <td>10,651.10</td>
+      <td>10,141.13</td>
+      <td>-47,427.18</td>
+      <td>-4.79</td>
+      <td>2000-09-28</td>
+      <td>2000-10-20</td>
+      <td>NaN</td>
+      <td>22 days</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>93</td>
+      <td>203</td>
+      <td>274</td>
+      <td>10,161.41</td>
+      <td>10,982.71</td>
+      <td>76,380.70</td>
+      <td>8.08</td>
+      <td>2000-10-20</td>
+      <td>2001-02-02</td>
+      <td>NaN</td>
+      <td>105 days</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>119</td>
+      <td>432</td>
+      <td>433</td>
+      <td>8,622.80</td>
+      <td>8,660.06</td>
+      <td>4,433.77</td>
+      <td>0.43</td>
+      <td>2001-09-25</td>
+      <td>2001-09-26</td>
+      <td>NaN</td>
+      <td>1 days</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>119</td>
+      <td>433</td>
+      <td>434</td>
+      <td>8,677.38</td>
+      <td>8,567.46</td>
+      <td>-13,080.45</td>
+      <td>-1.27</td>
+      <td>2001-09-26</td>
+      <td>2001-09-27</td>
+      <td>NaN</td>
+      <td>1 days</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>118</td>
+      <td>434</td>
+      <td>435</td>
+      <td>8,584.59</td>
+      <td>8,679.07</td>
+      <td>11,148.10</td>
+      <td>1.10</td>
+      <td>2001-09-27</td>
+      <td>2001-09-28</td>
+      <td>NaN</td>
+      <td>1 days</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>118</td>
+      <td>435</td>
+      <td>436</td>
+      <td>8,696.43</td>
+      <td>8,845.97</td>
+      <td>17,645.87</td>
+      <td>1.72</td>
+      <td>2001-09-28</td>
+      <td>2001-10-01</td>
+      <td>NaN</td>
+      <td>3 days</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>118</td>
+      <td>436</td>
+      <td>505</td>
+      <td>8,863.66</td>
+      <td>10,153.18</td>
+      <td>152,163.13</td>
+      <td>14.55</td>
+      <td>2001-10-01</td>
+      <td>2002-01-09</td>
+      <td>NaN</td>
+      <td>100 days</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>153</td>
+      <td>639</td>
+      <td>640</td>
+      <td>7,801.12</td>
+      <td>7,698.46</td>
+      <td>-15,707.12</td>
+      <td>-1.32</td>
+      <td>2002-07-23</td>
+      <td>2002-07-24</td>
+      <td>NaN</td>
+      <td>1 days</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>153</td>
+      <td>640</td>
+      <td>709</td>
+      <td>7,713.86</td>
+      <td>8,363.95</td>
+      <td>99,464.28</td>
+      <td>8.43</td>
+      <td>2002-07-24</td>
+      <td>2002-10-30</td>
+      <td>NaN</td>
+      <td>98 days</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>124</td>
+      <td>1057</td>
+      <td>1262</td>
+      <td>10,316.44</td>
+      <td>10,619.77</td>
+      <td>37,612.70</td>
+      <td>2.94</td>
+      <td>2004-03-19</td>
+      <td>2005-01-11</td>
+      <td>NaN</td>
+      <td>298 days</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>128</td>
+      <td>1382</td>
+      <td>1383</td>
+      <td>10,323.74</td>
+      <td>10,366.52</td>
+      <td>5,476.27</td>
+      <td>0.41</td>
+      <td>2005-07-05</td>
+      <td>2005-07-06</td>
+      <td>NaN</td>
+      <td>1 days</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>127</td>
+      <td>1383</td>
+      <td>1558</td>
+      <td>10,387.25</td>
+      <td>11,210.97</td>
+      <td>104,612.08</td>
+      <td>7.93</td>
+      <td>2005-07-06</td>
+      <td>2006-03-16</td>
+      <td>NaN</td>
+      <td>253 days</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>117</td>
+      <td>1802</td>
+      <td>1871</td>
+      <td>12,228.87</td>
+      <td>13,482.43</td>
+      <td>146,666.61</td>
+      <td>10.25</td>
+      <td>2007-03-07</td>
+      <td>2007-06-14</td>
+      <td>NaN</td>
+      <td>99 days</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>119</td>
+      <td>1921</td>
+      <td>2023</td>
+      <td>13,262.35</td>
+      <td>12,092.72</td>
+      <td>-139,186.20</td>
+      <td>-8.82</td>
+      <td>2007-08-24</td>
+      <td>2008-01-22</td>
+      <td>NaN</td>
+      <td>151 days</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>115</td>
+      <td>2029</td>
+      <td>2134</td>
+      <td>12,505.10</td>
+      <td>11,345.70</td>
+      <td>-133,330.97</td>
+      <td>-9.27</td>
+      <td>2008-01-30</td>
+      <td>2008-06-30</td>
+      <td>NaN</td>
+      <td>152 days</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>152</td>
+      <td>2210</td>
+      <td>2211</td>
+      <td>8,594.19</td>
+      <td>8,975.35</td>
+      <td>57,935.63</td>
+      <td>4.44</td>
+      <td>2008-10-16</td>
+      <td>2008-10-17</td>
+      <td>NaN</td>
+      <td>1 days</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>151</td>
+      <td>2211</td>
+      <td>2212</td>
+      <td>8,993.30</td>
+      <td>8,852.30</td>
+      <td>-21,291.08</td>
+      <td>-1.57</td>
+      <td>2008-10-17</td>
+      <td>2008-10-20</td>
+      <td>NaN</td>
+      <td>3 days</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>151</td>
+      <td>2212</td>
+      <td>2308</td>
+      <td>8,870.00</td>
+      <td>6,547.01</td>
+      <td>-350,772.19</td>
+      <td>-26.19</td>
+      <td>2008-10-20</td>
+      <td>2009-03-10</td>
+      <td>NaN</td>
+      <td>141 days</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>143</td>
+      <td>2309</td>
+      <td>2378</td>
+      <td>6,936.98</td>
+      <td>8,496.73</td>
+      <td>223,044.87</td>
+      <td>22.48</td>
+      <td>2009-03-11</td>
+      <td>2009-06-18</td>
+      <td>NaN</td>
+      <td>99 days</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>35</td>
+      <td>5408</td>
+      <td>5558</td>
+      <td>34,576.33</td>
+      <td>35,520.08</td>
+      <td>33,031.01</td>
+      <td>2.73</td>
+      <td>2021-07-01</td>
+      <td>2022-02-03</td>
+      <td>NaN</td>
+      <td>217 days</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>35</td>
+      <td>5558</td>
+      <td>5615</td>
+      <td>35,591.12</td>
+      <td>33,450.92</td>
+      <td>-74,906.87</td>
+      <td>-6.01</td>
+      <td>2022-02-03</td>
+      <td>2022-04-27</td>
+      <td>NaN</td>
+      <td>83 days</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>40</td>
+      <td>5731</td>
+      <td>5741</td>
+      <td>29,291.53</td>
+      <td>31,738.44</td>
+      <td>97,876.51</td>
+      <td>8.35</td>
+      <td>2022-10-12</td>
+      <td>2022-10-26</td>
+      <td>NaN</td>
+      <td>14 days</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>38</td>
+      <td>5978</td>
+      <td>5979</td>
+      <td>33,106.78</td>
+      <td>33,259.84</td>
+      <td>5,816.25</td>
+      <td>0.46</td>
+      <td>2023-10-06</td>
+      <td>2023-10-09</td>
+      <td>NaN</td>
+      <td>3 days</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>38</td>
+      <td>5979</td>
+      <td>5980</td>
+      <td>33,326.36</td>
+      <td>33,683.41</td>
+      <td>13,567.92</td>
+      <td>1.07</td>
+      <td>2023-10-09</td>
+      <td>2023-10-10</td>
+      <td>NaN</td>
+      <td>1 days</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>38</td>
+      <td>5980</td>
+      <td>6024</td>
+      <td>33,750.78</td>
+      <td>36,442.10</td>
+      <td>102,270.33</td>
+      <td>7.97</td>
+      <td>2023-10-10</td>
+      <td>2023-12-12</td>
+      <td>NaN</td>
+      <td>63 days</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>35</td>
+      <td>6149</td>
+      <td>6218</td>
+      <td>39,028.50</td>
+      <td>41,959.40</td>
+      <td>102,581.35</td>
+      <td>7.51</td>
+      <td>2024-06-12</td>
+      <td>2024-09-20</td>
+      <td>NaN</td>
+      <td>100 days</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>35</td>
+      <td>6288</td>
+      <td>6289</td>
+      <td>42,721.97</td>
+      <td>42,660.10</td>
+      <td>-2,165.49</td>
+      <td>-0.14</td>
+      <td>2024-12-31</td>
+      <td>2025-01-02</td>
+      <td>NaN</td>
+      <td>2 days</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>34</td>
+      <td>6289</td>
+      <td>6318</td>
+      <td>42,745.42</td>
+      <td>44,720.99</td>
+      <td>67,169.26</td>
+      <td>4.62</td>
+      <td>2025-01-02</td>
+      <td>2025-02-14</td>
+      <td>NaN</td>
+      <td>43 days</td>
+    </tr>
+  </tbody>
+</table> <!-- table -->
+            </body>
+            </html>
+        
