@@ -133,7 +133,7 @@ class OHLCVAPIManager(APIManager):
                 exchange_name = ''
                 api_url = api_url_format.format(prd)
                 ticker = yf.Ticker(prd)
-                ticker_df = ticker.history(period='30d', interval='1d')
+                ticker_df = ticker.history(period='60d', interval='1d')
                 # ticker_df = ticker.history(period='max', interval='1d')
                 if prd in dict_exchange.keys():
                     exchange_name = ticker_info[prd]

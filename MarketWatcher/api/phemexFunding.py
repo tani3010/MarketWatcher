@@ -31,29 +31,38 @@ class Phemex(BaseSelenium):
         df_daily_phemex = pd.DataFrame()
 
         self.navigate(self.URL_BASE)
+        
 
         # tmp = self.driver.find_elements_by_xpath("//li[@class='pr T2 cp ph10 svelte-r327t8']")
-        tmp = self.driver.find_elements(By.XPATH, "//li[@class='pr T2 cp ph10 svelte-slwroa']") # product list
+        # tmp = self.driver.find_elements(By.XPATH, "//li[@class='pr T2 cp ph10 svelte-slwroa']") # product list
+        tmp = self.driver.find_elements(By.XPATH, "//li[@class='pr T2 cp ph10 svelte-dtfa70']") # product list
 
         product_count = len(tmp)
         product_list = self.yaml['ExchangeSetting']['phemex']['products']
         for i in range(2, product_count+2):
-
             self.navigate(self.URL_BASE)
             self.wait_expected_condition()
 
+            # to click history
+            xpath = r'//*[@id="page"]/div[2]/div/div/div[2]/div[1]/div[2]'
+            btn = self.driver.find_element(By.XPATH, xpath)
+            btn.click()
+            self.wait_expected_condition(5)
+
             # xpath = r'/html/body/div[1]/div[2]/div/div/div/div[1]/div/div[2]'
-            xpath = r'/html/body/div[1]/div[3]/div/div/div/div[1]/div/div[2]'
+            # xpath = r'/html/body/div[1]/div[3]/div/div/div/div[1]/div/div[2]'
+            xpath = r'/html/body/div[1]/div[2]/div/div/div[2]/div[2]/div[1]/div/div/div'
 
             # btn = self.driver.find_element_by_xpath(xpath)
             btn = self.driver.find_element(By.XPATH, xpath)
             
             btn.click()
-            self.wait_expected_condition()
+            self.wait_expected_condition(5)
             
             # xpath = r'/html/body/div[1]/div[2]/div/div/div/div[1]/div/div[2]/ul/li[{}]'.format(i)
-            xpath = r'/html/body/div[1]/div[3]/div/div/div/div[1]/div/div[2]/ul/li[{}]'.format(i)
-
+            # xpath = r'/html/body/div[1]/div[3]/div/div/div/div[1]/div/div[2]/ul/li[{}]'.format(i)
+            xpath = r'/html/body/div[1]/div[2]/div/div/div[2]/div[2]/div[1]/div/ul/li[{}]'.format(i)
+                      
             # btn = self.driver.find_element_by_xpath(xpath)
             btn = self.driver.find_element(By.XPATH, xpath)
 
@@ -75,7 +84,8 @@ class Phemex(BaseSelenium):
                 while True:
                     # fr_web_list = self.driver.find_elements_by_css_selector(".td.T2.svelte-15wjsvk")
                     # fr_web_list = self.driver.find_elements_by_css_selector(".td.T2.svelte-o5ul1o")
-                    fr_web_list = self.driver.find_elements(By.CSS_SELECTOR, ".td.T2.svelte-o5ul1o")
+                    # fr_web_list = self.driver.find_elements(By.CSS_SELECTOR, ".td.T2.svelte-o5ul1o")
+                    fr_web_list = self.driver.find_elements(By.CSS_SELECTOR, "div.td.svelte-olu3su")
                     for j in range(0, len(fr_web_list), 4):
                         timestamp = fr_web_list[j].text
                         product_code = fr_web_list[j+1].text
@@ -104,7 +114,7 @@ class Phemex(BaseSelenium):
                         self.driver.execute_script('arguments[0].click();', next_btn)
                         self.wait_expected_condition()
                         count += 1
-                        if count > 20:
+                        if count > 60:
                             logger.info('[{}][{} pages were loaded][{}] completed.'.format(product_code, count, self.URL_BASE))
                             break
                     except:
