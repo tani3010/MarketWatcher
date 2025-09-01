@@ -35,30 +35,34 @@ class Phemex(BaseSelenium):
 
         # tmp = self.driver.find_elements_by_xpath("//li[@class='pr T2 cp ph10 svelte-r327t8']")
         # tmp = self.driver.find_elements(By.XPATH, "//li[@class='pr T2 cp ph10 svelte-slwroa']") # product list
-        tmp = self.driver.find_elements(By.XPATH, "//li[@class='pr T2 cp ph10 svelte-dtfa70']") # product list
+        # tmp = self.driver.find_elements(By.XPATH, "//li[@class='pr T2 cp ph10 svelte-dtfa70']") # product list
+        tmp = self.driver.find_elements(By.XPATH, "//li[@class='pr T2 cp ph10 svelte-dnam8t']") # product list
 
         product_count = len(tmp)
         product_list = self.yaml['ExchangeSetting']['phemex']['products']
+        product_search = False
         for i in range(2, product_count+2):
-            self.navigate(self.URL_BASE)
-            self.wait_expected_condition()
+            if not product_search:
+                self.navigate(self.URL_BASE)
+                self.wait_expected_condition()
 
-            # to click history
-            xpath = r'//*[@id="page"]/div[2]/div/div/div[2]/div[1]/div[2]'
-            btn = self.driver.find_element(By.XPATH, xpath)
-            btn.click()
-            self.wait_expected_condition(5)
+                # to click history
+                xpath = r'//*[@id="page"]/div[2]/div/div/div[2]/div[1]/div[2]'
+                btn = self.driver.find_element(By.XPATH, xpath)
+                btn.click()
+                self.wait_expected_condition(5)
 
-            # xpath = r'/html/body/div[1]/div[2]/div/div/div/div[1]/div/div[2]'
-            # xpath = r'/html/body/div[1]/div[3]/div/div/div/div[1]/div/div[2]'
-            xpath = r'/html/body/div[1]/div[2]/div/div/div[2]/div[2]/div[1]/div/div/div'
+                # xpath = r'/html/body/div[1]/div[2]/div/div/div/div[1]/div/div[2]'
+                # xpath = r'/html/body/div[1]/div[3]/div/div/div/div[1]/div/div[2]'
+                xpath = r'/html/body/div[1]/div[2]/div/div/div[2]/div[2]/div[1]/div/div/div'
 
-            # btn = self.driver.find_element_by_xpath(xpath)
-            btn = self.driver.find_element(By.XPATH, xpath)
+                # btn = self.driver.find_element_by_xpath(xpath)
+                btn = self.driver.find_element(By.XPATH, xpath)
             
-            btn.click()
-            self.wait_expected_condition(5)
+                btn.click()
+                self.wait_expected_condition(5)
             
+            product_search = True
             # xpath = r'/html/body/div[1]/div[2]/div/div/div/div[1]/div/div[2]/ul/li[{}]'.format(i)
             # xpath = r'/html/body/div[1]/div[3]/div/div/div/div[1]/div/div[2]/ul/li[{}]'.format(i)
             xpath = r'/html/body/div[1]/div[2]/div/div/div[2]/div[2]/div[1]/div/ul/li[{}]'.format(i)
@@ -74,6 +78,7 @@ class Phemex(BaseSelenium):
             if not product_name in product_list:
                 continue
 
+            product_search = False
             btn.click()
             self.wait_expected_condition()
 
@@ -109,12 +114,13 @@ class Phemex(BaseSelenium):
                     try:
                         if next_btn is None:
                             # next_btn = self.driver.find_element_by_css_selector(".next.svelte-3tqfek")
-                            next_btn = self.driver.find_element(By.CSS_SELECTOR, ".next.svelte-3tqfek")
+                            # next_btn = self.driver.find_element(By.CSS_SELECTOR, ".next.svelte-3tqfek")
+                            next_btn = self.driver.find_element(By.CSS_SELECTOR, ".next.svelte-1o1zqqd")
                             
                         self.driver.execute_script('arguments[0].click();', next_btn)
                         self.wait_expected_condition()
                         count += 1
-                        if count > 7:
+                        if count > 4:
                             logger.info('[{}][{} pages were loaded][{}] completed.'.format(product_code, count, self.URL_BASE))
                             break
                     except:
