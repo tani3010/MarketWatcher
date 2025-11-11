@@ -55,6 +55,10 @@ class OHLCVAPIManager(APIManager):
             df_yahoo = self.get_ohlcv_yahoo()
             df_yahoo = db.get_safe_OHLCV(df_yahoo)
             db.insert_many(df_yahoo.values)
+
+            df_yahoo = self.get_ohlcv_yahoo2()
+            df_yahoo = db.get_safe_OHLCV(df_yahoo)
+            db.insert_many(df_yahoo.values)
         except Exception as e:
             logger.error('[yahoo finance] updating OHLCV failed.')
             logger.error(e.args)
@@ -156,4 +160,63 @@ class OHLCVAPIManager(APIManager):
         df = df[df.Close > 0]
         df['source'] = ''
         df = df[self.table_header]
+        return df
+
+    # temporary data due to coinmetrics fail
+    def get_ohlcv_yahoo2(self):
+        target_dict = {
+            'ETH-USD': [
+                ['coinbase', 'ETH-USD-SPOT'],
+                ['bybit', 'ETHUSD-FUTURE'],
+                ['bitmex', 'ETHUSD-FUTURE'],
+                ['binance', 'ETHUSD_PERP-FUTURE']
+            ],
+            'BTC-USD': [
+                ['coinbase', 'BTC-USD-SPOT'],
+                ['bybit', 'BTCUSD-FUTURE'],
+                ['bitmex', 'XBTUSD-FUTURE'],
+                ['binance', 'BTCUSD_PERP-FUTURE']
+            ],
+            'XRP-USD' : [
+                ['bybit', 'XRPUSD-FUTURE'],
+                ['bitmex', 'XRPUSD-FUTURE'],
+                ['binance', 'XRPUSD_PERP-FUTURE']
+            ],
+            'BTC-JPY': [
+                ['bitflyer', 'BTC-JPY-SPOT']
+            ],
+            'ETH-JPY': [
+                ['bitflyer', 'ETH-JPY-SPOT']
+            ],
+            'XRP-JPY': [
+                ['bitflyer', 'XRP-JPY-SPOT']
+            ]
+        }
+
+        df = pd.DataFrame()
+        for key, val in target_dict.items():
+            tickerData = yf.Ticker(key)
+            tmp_df = tickerData.history(period='60d', interval='5m')
+            for x in val:
+                try:
+                    ticker_df = tmp_df.copy(deep=True)
+                    ticker_df['datetime'] = ticker_df.index
+                    ticker_df = self.add_column(ticker_df, 'exchange', x[0])
+                    ticker_df = self.add_column(ticker_df, 'product_code', x[1])
+                    ticker_df = self.add_column(ticker_df, 'Change', 0.0)
+                    ticker_df = self.convert_dtypes(ticker_df, self.table_dtypes)
+                    df = pd.concat([df, ticker_df], ignore_index=False)
+                    logger.info('[yahoo finance][{}][{}] api connection completed.'.format(x[0], x[1]))
+                except Exception as e:
+                    logger.error('[yahoo finance][{}][{}] api connection failed.'.format(x[0], x[1]))
+                    logger.error(e.args)
+
+        df = self.add_timestamp_datetime(df)
+        df = self.add_updatetime(df)
+        df['source'] = 'alternative'
+        df['Volume'] = 0.0
+        df = df[df.Close > 0]
+        df = df[self.table_header]
+        df = df[df.index > '2025/10/26 00:00']  # data missing from
+
         return df
