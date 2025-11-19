@@ -218,5 +218,5 @@ class OHLCVAPIManager(APIManager):
         df = df[df.Close > 0]
         df = df[self.table_header]
         df = df[df.index > '2025/10/26 00:00']  # data missing from
-
+        df = df.reset_index()
         return df
