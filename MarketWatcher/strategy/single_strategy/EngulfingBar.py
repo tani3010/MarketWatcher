@@ -15,5 +15,6 @@ class EngulfingBar(BaseStrategy):
         if self.data.Open[-1] < self.data.Close[-2] < self.data.Open[-2] < self.data.Close[-1]:
             self.buy(tp=self.data.High[-1])
 
-        elif self.data.Close[-1] < self.data.Open[-2] < self.data.Close[-2] < self.data.Open[-1]:
-            self.sell(tp=self.data.Low[-1] * (1 - 0.0011))
+        #elif self.data.Close[-1] < self.data.Open[-2] < self.data.Close[-2] < self.data.Open[-1]:
+        #    eps = 0.0011
+        #    self.sell(tp=self.data.Low[-1] * (1 - eps))
