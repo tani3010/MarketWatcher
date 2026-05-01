@@ -1,0 +1,251 @@
+
+            <!DOCTYPE html>
+            <html>
+            <style>
+              table {text-align: right;}
+              table thead th {text-align: center;}
+            </style>
+            <head>
+              <meta charset="UTF-8">
+              <title>Backtesting</title>
+            </head>
+            <body>
+              <h1>stats</h1>
+              <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>GoldenCross_coinbase_BTC-USD-SPOT_1W</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Start</th>
+      <td>2016-01-03 00:00:00</td>
+    </tr>
+    <tr>
+      <th>End</th>
+      <td>2026-05-03 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Duration</th>
+      <td>3773 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Exposure Time [%]</th>
+      <td>36.11111111111111</td>
+    </tr>
+    <tr>
+      <th>Equity Initial [$]</th>
+      <td>1000000.0</td>
+    </tr>
+    <tr>
+      <th>Equity Final [$]</th>
+      <td>2698316.527900001</td>
+    </tr>
+    <tr>
+      <th>Equity Peak [$]</th>
+      <td>4223113.23165</td>
+    </tr>
+    <tr>
+      <th>Return [%]</th>
+      <td>169.8316527900001</td>
+    </tr>
+    <tr>
+      <th>Buy & Hold Return [%]</th>
+      <td>17571.713652728577</td>
+    </tr>
+    <tr>
+      <th>Return (Ann.) [%]</th>
+      <td>95.60811286358461</td>
+    </tr>
+    <tr>
+      <th>Volatility (Ann.) [%]</th>
+      <td>187.03681412096302</td>
+    </tr>
+    <tr>
+      <th>Sharpe Ratio</th>
+      <td>0.5111726978077782</td>
+    </tr>
+    <tr>
+      <th>Sortino Ratio</th>
+      <td>1.930192806675</td>
+    </tr>
+    <tr>
+      <th>Calmar Ratio</th>
+      <td>2.0193203517379406</td>
+    </tr>
+    <tr>
+      <th>Max. Drawdown [%]</th>
+      <td>-47.346679184062545</td>
+    </tr>
+    <tr>
+      <th>Avg. Drawdown [%]</th>
+      <td>-13.019955139514936</td>
+    </tr>
+    <tr>
+      <th>Max. Drawdown Duration</th>
+      <td>1575 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Avg. Drawdown Duration</th>
+      <td>160 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th># Trades</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>Win Rate [%]</th>
+      <td>66.66666666666666</td>
+    </tr>
+    <tr>
+      <th>Best Trade [%]</th>
+      <td>103.2786465505123</td>
+    </tr>
+    <tr>
+      <th>Worst Trade [%]</th>
+      <td>-36.94368212737045</td>
+    </tr>
+    <tr>
+      <th>Avg. Trade [%]</th>
+      <td>18.254105954220922</td>
+    </tr>
+    <tr>
+      <th>Max. Trade Duration</th>
+      <td>329 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Avg. Trade Duration</th>
+      <td>223 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Profit Factor</th>
+      <td>3.7356939745846445</td>
+    </tr>
+    <tr>
+      <th>Expectancy [%]</th>
+      <td>28.535720989518204</td>
+    </tr>
+    <tr>
+      <th>SQN</th>
+      <td>0.7982782409418425</td>
+    </tr>
+    <tr>
+      <th>Kelly Criterion</th>
+      <td>0.3714278273121657</td>
+    </tr>
+    <tr>
+      <th>_parameter</th>
+      <td>{'2016-01-03 00:00:00_2018-01-21 00:00:00': {'GoldenCross_timeperiod_short': 16, 'GoldenCross_timeperiod_long': 44}, '2018-01-28 00:00:00_2020-02-16 00:00:00': {'GoldenCross_timeperiod_short': 16, 'GoldenCross_timeperiod_long': 44}, '2020-02-23 00:00:00_2022-03-13 00:00:00': {'GoldenCross_timeperiod_short': 19, 'GoldenCross_timeperiod_long': 26}, '2022-03-20 00:00:00_2024-04-07 00:00:00': {'GoldenCross_timeperiod_short': 9, 'GoldenCross_timeperiod_long': 29}, '2024-04-14 00:00:00_2026-05-03 00:00:00': {'GoldenCross_timeperiod_short': 9, 'GoldenCross_timeperiod_long': 29}}</td>
+    </tr>
+  </tbody>
+</table> <!-- table -->
+              <h1>trades</h1>
+              <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>Size</th>
+      <th>EntryBar</th>
+      <th>ExitBar</th>
+      <th>EntryPrice</th>
+      <th>ExitPrice</th>
+      <th>PnL</th>
+      <th>ReturnPct</th>
+      <th>EntryTime</th>
+      <th>ExitTime</th>
+      <th>Tag</th>
+      <th>Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>114</td>
+      <td>179</td>
+      <td>215</td>
+      <td>8,745.29</td>
+      <td>10,168.36</td>
+      <td>162,230.37</td>
+      <td>16.27</td>
+      <td>2019-06-09</td>
+      <td>2020-02-16</td>
+      <td>NaN</td>
+      <td>252 days</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>19</td>
+      <td>304</td>
+      <td>323</td>
+      <td>60,908.76</td>
+      <td>38,406.82</td>
+      <td>-427,536.82</td>
+      <td>-36.94</td>
+      <td>2021-10-31</td>
+      <td>2022-03-13</td>
+      <td>NaN</td>
+      <td>133 days</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>33</td>
+      <td>372</td>
+      <td>410</td>
+      <td>21,811.58</td>
+      <td>35,035.79</td>
+      <td>436,398.94</td>
+      <td>60.63</td>
+      <td>2023-02-19</td>
+      <td>2023-11-12</td>
+      <td>NaN</td>
+      <td>266 days</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>33</td>
+      <td>410</td>
+      <td>431</td>
+      <td>35,070.83</td>
+      <td>71,291.50</td>
+      <td>1,195,282.25</td>
+      <td>103.28</td>
+      <td>2023-11-12</td>
+      <td>2024-04-07</td>
+      <td>NaN</td>
+      <td>147 days</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>34</td>
+      <td>462</td>
+      <td>492</td>
+      <td>68,805.14</td>
+      <td>105,697.93</td>
+      <td>1,254,354.98</td>
+      <td>53.62</td>
+      <td>2024-11-10</td>
+      <td>2025-06-08</td>
+      <td>NaN</td>
+      <td>210 days</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>34</td>
+      <td>492</td>
+      <td>539</td>
+      <td>105,803.63</td>
+      <td>78,673.83</td>
+      <td>-922,413.19</td>
+      <td>-25.64</td>
+      <td>2025-06-08</td>
+      <td>2026-05-03</td>
+      <td>NaN</td>
+      <td>329 days</td>
+    </tr>
+  </tbody>
+</table> <!-- table -->
+            </body>
+            </html>
+        
