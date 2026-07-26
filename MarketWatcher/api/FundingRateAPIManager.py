@@ -86,10 +86,23 @@ class FundingRateAPIManager(APIManager):
         for exc in self.yaml['ExchangeSetting'].values():
             if not exc['valid']:
                 continue
+
+            products_for_funding = None
+            if 'productsForFundingRate' in exc:
+                products_for_funding = exc['productsForFundingRate']
+
             for prd in exc['products']:
                 try:
                     self.base_url = exc['apiBaseURL']
-                    output = self.request_suburl(exc['fundingRateApi'].format(prd))
+
+                    if not products_for_funding is None:
+                        if not prd in products_for_funding:
+                            continue
+                        else:
+                            output = self.request_suburl(exc['fundingRateApi'].format(products_for_funding[prd]))
+                    else:
+                        output = self.request_suburl(exc['fundingRateApi'].format(prd))
+
                     if 'fundingRateDFKeys' in exc.keys():
                         tmp = output
                         for key in exc['fundingRateDFKeys']:

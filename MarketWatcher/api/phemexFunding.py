@@ -36,7 +36,8 @@ class Phemex(BaseSelenium):
         # tmp = self.driver.find_elements_by_xpath("//li[@class='pr T2 cp ph10 svelte-r327t8']")
         # tmp = self.driver.find_elements(By.XPATH, "//li[@class='pr T2 cp ph10 svelte-slwroa']") # product list
         # tmp = self.driver.find_elements(By.XPATH, "//li[@class='pr T2 cp ph10 svelte-dtfa70']") # product list
-        tmp = self.driver.find_elements(By.XPATH, "//li[@class='pr T2 cp ph10 svelte-dnam8t']") # product list
+        # tmp = self.driver.find_elements(By.XPATH, "//li[@class='pr T2 cp ph10 svelte-dnam8t']") # product list
+        tmp = self.driver.find_elements(By.XPATH, "//li[@class='pr T2 cp ph10 svelte-1bejgep']") # product list
 
         product_count = len(tmp)
         product_list = self.yaml['ExchangeSetting']['phemex']['products']
@@ -47,14 +48,16 @@ class Phemex(BaseSelenium):
                 self.wait_expected_condition()
 
                 # to click history
-                xpath = r'//*[@id="page"]/div[2]/div/div/div[2]/div[1]/div[2]'
+                # xpath = r'//*[@id="page"]/div[2]/div/div/div[2]/div[1]/div[2]'
+                xpath = r'//*[@id="page"]/div[2]/div/div[2]/div[1]/div[2]'
                 btn = self.driver.find_element(By.XPATH, xpath)
                 btn.click()
                 self.wait_expected_condition(5)
 
                 # xpath = r'/html/body/div[1]/div[2]/div/div/div/div[1]/div/div[2]'
                 # xpath = r'/html/body/div[1]/div[3]/div/div/div/div[1]/div/div[2]'
-                xpath = r'/html/body/div[1]/div[2]/div/div/div[2]/div[2]/div[1]/div/div/div'
+                # xpath = r'/html/body/div[1]/div[2]/div/div/div[2]/div[2]/div[1]/div/div/div'
+                xpath = r'/html/body/div[1]/div[2]/div/div[2]/div[2]/div[1]/div'
 
                 # btn = self.driver.find_element_by_xpath(xpath)
                 btn = self.driver.find_element(By.XPATH, xpath)
@@ -65,7 +68,8 @@ class Phemex(BaseSelenium):
             product_search = True
             # xpath = r'/html/body/div[1]/div[2]/div/div/div/div[1]/div/div[2]/ul/li[{}]'.format(i)
             # xpath = r'/html/body/div[1]/div[3]/div/div/div/div[1]/div/div[2]/ul/li[{}]'.format(i)
-            xpath = r'/html/body/div[1]/div[2]/div/div/div[2]/div[2]/div[1]/div/ul/li[{}]'.format(i)
+            # xpath = r'/html/body/div[1]/div[2]/div/div/div[2]/div[2]/div[1]/div/ul/li[{}]'.format(i)
+            xpath = r'/html/body/div[1]/div[2]/div/div[2]/div[2]/div[1]/div/ul/li[{}]'.format(i)
                       
             # btn = self.driver.find_element_by_xpath(xpath)
             btn = self.driver.find_element(By.XPATH, xpath)
@@ -115,12 +119,14 @@ class Phemex(BaseSelenium):
                         if next_btn is None:
                             # next_btn = self.driver.find_element_by_css_selector(".next.svelte-3tqfek")
                             # next_btn = self.driver.find_element(By.CSS_SELECTOR, ".next.svelte-3tqfek")
-                            next_btn = self.driver.find_element(By.CSS_SELECTOR, ".next.svelte-1o1zqqd")
+                            # next_btn = self.driver.find_element(By.CSS_SELECTOR, "next svelte-1e26z0i")
+                            next_btn = self.driver.find_element(By.XPATH, "//li[@class='next svelte-1e26z0i']")
+
                             
                         self.driver.execute_script('arguments[0].click();', next_btn)
-                        self.wait_expected_condition()
+                        self.wait_expected_condition(0.8)
                         count += 1
-                        if count > 4:
+                        if count > 5:
                             logger.info('[{}][{} pages were loaded][{}] completed.'.format(product_code, count, self.URL_BASE))
                             break
                     except:
@@ -133,6 +139,7 @@ class Phemex(BaseSelenium):
             finally:
                 if df_daily_phemex is not None and len(df_daily_phemex) > 0:
                     df_daily_phemex['exchange'] = 'phemex'
+                    df_daily_phemex = df_daily_phemex.drop_duplicates()
                     df_daily_phemex['updatetime'] = time()
                     df_daily_phemex = df_daily_phemex[(df_daily_phemex.fundingRate > -0.005) & (df_daily_phemex.fundingRate < 0.005)]
                     db.insert_many(

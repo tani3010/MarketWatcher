@@ -16,7 +16,7 @@ class BaseSelenium():
             self.WAIT_SECOND_INITIAL = 6
             self.WAIT_SECOND_CLICK = 1.5
             # self.WAIT_NORMAL = 2
-            self.WAIT_NORMAL = 10
+            self.WAIT_NORMAL = 6
             self.visible = True
             self.driver_option = webdriver.ChromeOptions()
             if not self.visible:
@@ -48,7 +48,7 @@ class BaseSelenium():
         self.driver.get(url)
         self.driver.implicitly_wait(self.WAIT_SECOND_INITIAL)
 
-    def wait_expected_condition(self, timeout=30):
+    def wait_expected_condition(self, sleep_time=6, timeout=30):
         WebDriverWait(self.driver, timeout).until(EC.presence_of_all_elements_located)
         # self.driver.implicitly_wait(self.WAIT_SECOND_CLICK)
-        time.sleep(self.WAIT_NORMAL)
+        time.sleep(sleep_time)
