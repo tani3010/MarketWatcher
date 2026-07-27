@@ -88,7 +88,7 @@ class FundingRateAPIManager(APIManager):
                 continue
 
             products_for_funding = None
-            if 'productsForFundingRate' in exc:
+            if 'productsForFundingRate' in exc.keys():
                 products_for_funding = exc['productsForFundingRate']
 
             for prd in exc['products']:
@@ -96,7 +96,7 @@ class FundingRateAPIManager(APIManager):
                     self.base_url = exc['apiBaseURL']
 
                     if not products_for_funding is None:
-                        if not prd in products_for_funding:
+                        if not prd in products_for_funding.keys():
                             continue
                         else:
                             output = self.request_suburl(exc['fundingRateApi'].format(products_for_funding[prd]))

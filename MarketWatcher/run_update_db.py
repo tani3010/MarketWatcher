@@ -12,7 +12,7 @@ def update_db():
     try:
         OHLCVAPIManager().update_db()
         # ByBit().update_db()
-        Phemex().update_db()
+        # Phemex().update_db()
         FundingRateAPIManager().update_db()
         # FundingRateAPIManager().update_db_mexc()
         FundingRateAPIManager().export_funding_summary()
