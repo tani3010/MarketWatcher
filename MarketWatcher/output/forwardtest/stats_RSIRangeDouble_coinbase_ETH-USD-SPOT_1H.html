@@ -1,0 +1,265 @@
+
+            <!DOCTYPE html>
+            <html>
+            <style>
+              table {text-align: right;}
+              table thead th {text-align: center;}
+            </style>
+            <head>
+              <meta charset="UTF-8">
+              <title>Backtesting</title>
+            </head>
+            <body>
+              <h1>stats</h1>
+              <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>RSIRangeDouble_coinbase_ETH-USD-SPOT_1H</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Start</th>
+      <td>2021-12-11 00:00:00</td>
+    </tr>
+    <tr>
+      <th>End</th>
+      <td>2026-09-24 07:00:00</td>
+    </tr>
+    <tr>
+      <th>Duration</th>
+      <td>1748 days 07:00:00</td>
+    </tr>
+    <tr>
+      <th>Exposure Time [%]</th>
+      <td>8.758341277407053</td>
+    </tr>
+    <tr>
+      <th>Equity Initial [$]</th>
+      <td>1000000.0</td>
+    </tr>
+    <tr>
+      <th>Equity Final [$]</th>
+      <td>2160893.348681002</td>
+    </tr>
+    <tr>
+      <th>Equity Peak [$]</th>
+      <td>2177632.827562838</td>
+    </tr>
+    <tr>
+      <th>Return [%]</th>
+      <td>116.0893348681002</td>
+    </tr>
+    <tr>
+      <th>Buy & Hold Return [%]</th>
+      <td>-31.164635692282193</td>
+    </tr>
+    <tr>
+      <th>Return (Ann.) [%]</th>
+      <td>17.445088064661405</td>
+    </tr>
+    <tr>
+      <th>Volatility (Ann.) [%]</th>
+      <td>27.37967920174414</td>
+    </tr>
+    <tr>
+      <th>Sharpe Ratio</th>
+      <td>0.6371545822768485</td>
+    </tr>
+    <tr>
+      <th>Sortino Ratio</th>
+      <td>1.368207674781194</td>
+    </tr>
+    <tr>
+      <th>Calmar Ratio</th>
+      <td>0.7537828762188356</td>
+    </tr>
+    <tr>
+      <th>Max. Drawdown [%]</th>
+      <td>-23.143386000183973</td>
+    </tr>
+    <tr>
+      <th>Avg. Drawdown [%]</th>
+      <td>-4.21928692028403</td>
+    </tr>
+    <tr>
+      <th>Max. Drawdown Duration</th>
+      <td>531 days 06:00:00</td>
+    </tr>
+    <tr>
+      <th>Avg. Drawdown Duration</th>
+      <td>28 days 10:00:00</td>
+    </tr>
+    <tr>
+      <th># Trades</th>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>Win Rate [%]</th>
+      <td>85.71428571428571</td>
+    </tr>
+    <tr>
+      <th>Best Trade [%]</th>
+      <td>27.45174003397235</td>
+    </tr>
+    <tr>
+      <th>Worst Trade [%]</th>
+      <td>-2.4198837848416477</td>
+    </tr>
+    <tr>
+      <th>Avg. Trade [%]</th>
+      <td>11.643332103238379</td>
+    </tr>
+    <tr>
+      <th>Max. Trade Duration</th>
+      <td>47 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th>Avg. Trade Duration</th>
+      <td>21 days 20:00:00</td>
+    </tr>
+    <tr>
+      <th>Profit Factor</th>
+      <td>36.15641397626658</td>
+    </tr>
+    <tr>
+      <th>Expectancy [%]</th>
+      <td>12.153490873478253</td>
+    </tr>
+    <tr>
+      <th>SQN</th>
+      <td>2.8990462039738354</td>
+    </tr>
+    <tr>
+      <th>Kelly Criterion</th>
+      <td>0.8268056794635682</td>
+    </tr>
+    <tr>
+      <th>_parameter</th>
+      <td>{'2021-12-11 00:00:00_2022-11-25 15:00:00': {'RSI_shifter': 2, 'RSI_timeperiod': 17, 'RSI_lower_threshold': 25, 'RSI_upper_threshold': 75}, '2022-11-25 16:00:00_2023-11-10 07:00:00': {'RSI_shifter': 2, 'RSI_timeperiod': 17, 'RSI_lower_threshold': 25, 'RSI_upper_threshold': 75}, '2023-11-10 08:00:00_2024-10-24 23:00:00': {'RSI_shifter': 2, 'RSI_timeperiod': 22, 'RSI_lower_threshold': 28, 'RSI_upper_threshold': 75}, '2024-10-25 00:00:00_2025-10-09 15:00:00': {'RSI_shifter': 6, 'RSI_timeperiod': 29, 'RSI_lower_threshold': 27, 'RSI_upper_threshold': 75}, '2025-10-09 16:00:00_2026-09-24 07:00:00': {'RSI_shifter': 3, 'RSI_timeperiod': 20, 'RSI_lower_threshold': 26, 'RSI_upper_threshold': 75}}</td>
+    </tr>
+  </tbody>
+</table> <!-- table -->
+              <h1>trades</h1>
+              <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th></th>
+      <th>Size</th>
+      <th>EntryBar</th>
+      <th>ExitBar</th>
+      <th>EntryPrice</th>
+      <th>ExitPrice</th>
+      <th>PnL</th>
+      <th>ReturnPct</th>
+      <th>EntryTime</th>
+      <th>ExitTime</th>
+      <th>Tag</th>
+      <th>Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>405</td>
+      <td>1018</td>
+      <td>1370</td>
+      <td>2,467.37</td>
+      <td>3,031.34</td>
+      <td>228,405.86</td>
+      <td>22.86</td>
+      <td>2022-01-22 10:00:00</td>
+      <td>2022-02-06 02:00:00</td>
+      <td>NaN</td>
+      <td>14 days 16:00:00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1356</td>
+      <td>4558</td>
+      <td>4946</td>
+      <td>905.35</td>
+      <td>1,153.89</td>
+      <td>337,014.21</td>
+      <td>27.45</td>
+      <td>2022-06-18 22:00:00</td>
+      <td>2022-07-05 02:00:00</td>
+      <td>NaN</td>
+      <td>16 days 04:00:00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1097</td>
+      <td>10898</td>
+      <td>10974</td>
+      <td>1,426.61</td>
+      <td>1,604.45</td>
+      <td>195,095.77</td>
+      <td>12.47</td>
+      <td>2023-03-10 02:00:00</td>
+      <td>2023-03-13 06:00:00</td>
+      <td>NaN</td>
+      <td>3 days 04:00:00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1037</td>
+      <td>14762</td>
+      <td>15266</td>
+      <td>1,697.43</td>
+      <td>1,656.35</td>
+      <td>-42,595.53</td>
+      <td>-2.42</td>
+      <td>2023-08-18 02:00:00</td>
+      <td>2023-09-08 02:00:00</td>
+      <td>NaN</td>
+      <td>21 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>675</td>
+      <td>23258</td>
+      <td>24386</td>
+      <td>2,542.99</td>
+      <td>2,619.40</td>
+      <td>51,576.45</td>
+      <td>3.00</td>
+      <td>2024-08-06 02:00:00</td>
+      <td>2024-09-22 02:00:00</td>
+      <td>NaN</td>
+      <td>47 days 00:00:00</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>913</td>
+      <td>36435</td>
+      <td>37379</td>
+      <td>1,936.50</td>
+      <td>2,315.30</td>
+      <td>345,846.57</td>
+      <td>19.56</td>
+      <td>2026-02-06 03:00:00</td>
+      <td>2026-03-17 11:00:00</td>
+      <td>NaN</td>
+      <td>39 days 08:00:00</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1183</td>
+      <td>39271</td>
+      <td>39547</td>
+      <td>1,788.00</td>
+      <td>1,826.50</td>
+      <td>45,550.03</td>
+      <td>2.15</td>
+      <td>2026-06-04 07:00:00</td>
+      <td>2026-06-15 19:00:00</td>
+      <td>NaN</td>
+      <td>11 days 12:00:00</td>
+    </tr>
+  </tbody>
+</table> <!-- table -->
+            </body>
+            </html>
+        
